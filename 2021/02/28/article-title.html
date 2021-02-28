@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="如何用Hexo优雅的书写文章, Hexo">
+    <meta name="keywords" content="article title, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>如何用Hexo优雅的书写文章 | Hexo</title>
+    <title>article title | Hexo</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">如何用Hexo优雅的书写文章</h1>
+                    <h1 class="description center-align post-title">article title</h1>
                 </div>
             </div>
         </div>
@@ -431,25 +431,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/JustinLibo.github.io/tags/study/">
-                                <span class="chip bg-color">study</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/JustinLibo.github.io/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                工具
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -458,7 +445,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-01-03
+                    2021-02-28
                 </div>
                 
 
@@ -467,7 +454,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.8k
+                    0
                 </div>
                 
 
@@ -484,125 +471,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre><code>MarkDown是什么这里就不多说了，具体参考我的技术博客，同时这里推荐一下我的个人网站，使用的是hexo的butterfly主题：https://lovelijunyi.gitee.io/
-</code></pre>
-<h2 id="了解文章目录"><a href="#了解文章目录" class="headerlink" title="了解文章目录"></a>了解文章目录</h2><p>所有的文章都是放在主目录下source文件下的_posts目录下的，<code>这里参考我的存放目录E:\mblog\source\_posts</code></p>
-<p>这里作出两点说明：</p>
-<pre><code>1. 该目录下可以再创建目录，系统可以识别到多层文件夹中的文章，方便分类
-2. 如果用命令生成的新文章一定是在_posts主目录下
-</code></pre>
-<h2 id="熟悉操作指令"><a href="#熟悉操作指令" class="headerlink" title="熟悉操作指令"></a>熟悉操作指令</h2><p>其实就是一句话，再把生成的文章拖到_posts目录下你自己创建的文件夹即可，文件后缀为.md</p>
-<pre><code>hexo n 你的文章名
-</code></pre>
-<p><strong>Tips</strong>： 如果嫌麻烦，复制md文件再粘贴也是个好办法</p>
-<h2 id="开始书写文章"><a href="#开始书写文章" class="headerlink" title="开始书写文章"></a>开始书写文章</h2><p>写MarkDown这里推荐<strong>Typora</strong>，非常好用，点开创建的文件，先看看里面有啥</p>
-<hr>
-<p>title: typora-vue-theme主题介绍<br>date: 2018-09-07 09:25:00</p>
-<hr>
-<pre><code>---
-title: typora-vue-theme主题介绍
-date: 2018-09-07 09:25:00
----
-</code></pre>
-<p>两个虚线之间的内容就是叫<code>Front-matter</code>，主要是你文章的配置，具体配置如下，这里不同主题不一样，我以<strong>Matery</strong>主题为例</p>
-<p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。<br>配置选项    默认值    描述<br>title    Markdown 的文件标题    文章标题，强烈建议填写此选项<br>date    文件创建时的日期时间    发布时间，强烈建议填写此选项，且最好保证全局唯一<br>author    根 _config.yml 中的 author    文章作者<br>img    featureImages 中的某个值    文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <a target="_blank" rel="noopener" href="http://xxx.com/xxx.jpg">http://xxx.com/xxx.jpg</a><br>top    true    推荐文章（文章是否置顶），如果 top 值为 true，则会作为首页推荐文章<br>cover    false    v1.0.2版本新增，表示该文章是否需要加入到首页轮播封面中<br>coverImg    无    v1.0.2版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片<br>password    无    文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 password 的值，该值必须是用 SHA256 加密后的密码，防止被他人识破。前提是在主题的 config.yml 中激活了 verifyPassword 选项<br>toc    true    是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 config.yml 中激活了 toc 选项<br>mathjax    false    是否开启数学公式支持 ，本文章是否开启 mathjax，且需要在主题的 _config.yml 文件中也需要开启才行<br>summary    无    文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要<br>categories    无    文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类<br>tags    无    文章标签，一篇文章可以多个标签<br>keywords    文章标题    文章关键字，SEO 时需要<br>reprintPolicy    cc_by    文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个</p>
-<pre><code>注意:
-    1.如果 img 属性不填写的话，文章特色图会根据文章标题的 hashcode 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图各有特色。
-    2.date 的值尽量保证每篇文章是唯一的，因为本主题中 Gitalk 和 Gitment 识别 id 是通过 date 的值来作为唯一标识的。
-    3.如果要对文章设置阅读验证密码的功能，不仅要在 Front-matter 中设置采用了 SHA256 加密的 password 的值，还需要在主题的 _config.yml 中激活了配置。有些在线的 SHA256 加密的地址，可供你使用：开源中国在线工具、chahuo、站长工具。
-    4.您可以在文章md文件的 front-matter 中指定 reprintPolicy 来给单个文章配置转载规则
-</code></pre>
-<p>以下为文章的 <code>Front-matter</code> 示例。</p>
-<p>最全示例</p>
-<hr>
-<p>title: typora-vue-theme主题介绍<br>date: 2018-09-07 09:25:00<br>author: 赵奇<br>img: /source/images/xxx.jpg<br>top: true<br>cover: true<br>coverImg: /images/1.jpg<br>password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92<br>toc: false<br>mathjax: false<br>summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要<br>categories: Markdown<br>tags:</p>
-<ul>
-<li>Typora</li>
-<li>Markdown</li>
-</ul>
-<hr>
-<pre><code>---
-# 标题
-title: &#123;&#123; title &#125;&#125;
-date: &#123;&#123; date &#125;&#125;
-author: 无敌小小弋
-# 简述
-summary:
-# 使用自定义封面 
-img: 
-# 是否置顶true，或者去掉
-top: true
-# 轮播
-cover:
-# 轮播图
-coverImg: 
-# 标签
-tags: 
-# 分类
-categories: 
-# 是否加密文章，SHA256加密
-password: 
----
-</code></pre>
-<p><strong>Tips：你会发现一个问题，每次<code>hexo n</code>的时候<code>Front-matter</code>中内容少的可怜，那怎么修改默认的格式呢？只要去主目录下找到<code>scaffolds</code>文件夹下找到一个post.md文件修改即可，这里是我的目录C:\Users\user\Desktop\lovelijunyi\scaffolds，例如我的</strong></p>
-<hr>
-<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>title: 如何用Hexo优雅的书写文章<br>date: 1609632550000<br>author: 无敌小小弋</p>
-<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>summary:</p>
-<h1 id="使用自定义封面"><a href="#使用自定义封面" class="headerlink" title="使用自定义封面"></a>使用自定义封面</h1><p>img: </p>
-<h1 id="是否置顶true，或者去掉"><a href="#是否置顶true，或者去掉" class="headerlink" title="是否置顶true，或者去掉"></a>是否置顶true，或者去掉</h1><p>top: true</p>
-<h1 id="轮播"><a href="#轮播" class="headerlink" title="轮播"></a>轮播</h1><p>cover:</p>
-<h1 id="轮播图"><a href="#轮播图" class="headerlink" title="轮播图"></a>轮播图</h1><p>coverImg: </p>
-<h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags: </p>
-<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><p>categories: </p>
-<h1 id="是否加密文章，SHA256加密"><a href="#是否加密文章，SHA256加密" class="headerlink" title="是否加密文章，SHA256加密"></a>是否加密文章，SHA256加密</h1><h2 id="password"><a href="#password" class="headerlink" title="password: "></a>password: </h2><pre><code>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-</code></pre>
-<p>首行缩进方法</p>
-<pre><code>由于markdowm会自动限定格式，所以缩进显得比较困难，通常我们使用Tab按键或者打空格实现的缩进都只能缩进一小部分，这时可以通过占位符实现更多的缩进效果，使得文章变得美观
-</code></pre>
-<p>一个汉字占两个空格大小，所以使用四个空格就可以达到首行缩进两个汉字的效果。有如下几种方法：</p>
-<pre><code>一个空格大小的表示：&amp;ensp;或&amp;#8194;，此时只要在相应需要缩进的段落前加上 4个 如上的标记即可，注意要带上分号。
-两个空格的大小表示：&amp;emsp;或&amp;#8195;，同理，使用2个即可缩进2个汉字，推荐使用该方式。
-不换行空格：&amp;nbsp;或&amp;#160;，使用4个&amp;#160;即可。
-</code></pre>
-<p>范例</p>
-<p>不使用任何缩进效果</p>
-<p> 使用Tab实现缩进</p>
-<p> 在前面打上很多空格实现缩进</p>
-<pre><code>使用4个&amp;#160;实现缩进
-</code></pre>
-<p>  使用2个&emsp;实现缩进</p>
-<p>     使用4个&ensp;实现缩进<br>加粗指令不生效</p>
-<pre><code>**注意：**这是一个指令不生效的演示
-
-*\c\d\f*
-</code></pre>
-<p>以上两种情况都会导致加粗不生效，前者怀疑是符号和加粗语句冲突了，后者斜杠和加粗语句冲突了<br>解决办法</p>
-<pre><code>不要把符号包括进去加粗，注意：这是一个加粗演示
-后面空开一格（基本能解决大多数冲突），注意： 这是一个加粗演示
-使用html语句来实现，用strong标签包裹
-</code></pre>
-
+                
                 
             </div>
             <hr/>
@@ -618,7 +487,7 @@ password:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/JustinLibo.github.io/about" rel="external nofollow noreferrer">JustinBo</a>
+                    <a href="/JustinLibo.github.io/about" rel="external nofollow noreferrer">John Doe</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -628,7 +497,7 @@ password:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/010362216.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/010362216.html</a>
+                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/28/article-title.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/28/article-title.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -641,7 +510,7 @@ password:
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint polocy. If reproduced, please indicate source
-                    <a href="/JustinLibo.github.io/about" target="_blank">JustinBo</a>
+                    <a href="/JustinLibo.github.io/about" target="_blank">John Doe</a>
                     !
                 </span>
             </div>
@@ -665,11 +534,7 @@ password:
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/JustinLibo.github.io/tags/study/">
-                                    <span class="chip bg-color">study</span>
-                                </a>
-                            
+                            <span class="chip bg-color">No tag</span>
                         </div>
                     
                 </div>
@@ -839,11 +704,50 @@ password:
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/022516107.html">
+                <a href="/JustinLibo.github.io/2021/02/28/article-title.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/JustinLibo.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="article title">
+                        
+                        <span class="card-title">article title</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/JustinLibo.github.io/2021/02/25/hello-world.html">
                     <div class="card-image">
                         
                         
@@ -859,9 +763,9 @@ password:
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -869,55 +773,6 @@ password:
                             
                         </span>
                     </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/JustinLibo.github.io/2021/010263100.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/JustinLibo.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="hexo搭建博客步骤">
-                        
-                        <span class="card-title">hexo搭建博客步骤</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-02
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/JustinLibo.github.io/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/JustinLibo.github.io/tags/study/">
-                        <span class="chip bg-color">study</span>
-                    </a>
-                    
                 </div>
                 
             </div>

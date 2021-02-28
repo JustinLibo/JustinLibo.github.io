@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="article title, Hexo">
+    <meta name="keywords" content="hexo搭建博客步骤, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>article title | Hexo</title>
+    <title>hexo搭建博客步骤 | Hexo</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">article title</h1>
+                    <h1 class="description center-align post-title">hexo搭建博客步骤</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/JustinLibo.github.io/tags/study/">
+                                <span class="chip bg-color">study</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/JustinLibo.github.io/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                工具
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -445,7 +458,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-02-28
+                    2021-01-02
                 </div>
                 
 
@@ -454,7 +467,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    0
+                    291
                 </div>
                 
 
@@ -471,7 +484,24 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="hexo简介"><a href="#hexo简介" class="headerlink" title="hexo简介"></a>hexo简介</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/">hexo</a> 自称为：快速、简洁且高效的博客框架。</p>
+<p>笔者用起来确实还可以，大概介绍下几个特性：</p>
+<ul>
+<li>提供了不同的layout，可将文章存为草稿，需要时publish即可；</li>
+<li>可维护全局的数据，在source/_data文件夹下添加yaml文件，通过site.data获取；</li>
+<li>可指定文件的特有变量，通过<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/front-matter">Front-matter</a>实现；</li>
+<li>支持模板，在scaffolds文件夹下可自定义模板，并进行发布；</li>
+<li>支持标签插件，可以在文章文件中使用标签%%来插入特定内容；</li>
+<li>提供<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">命令行操作</a>，如：hexo init初始化项目、hexo new新建文章、hexo pulish发布草稿文件、hexo generate生成静态文件、hexo server启动服务器；</li>
+</ul>
+<h2 id="hexo搭建博客步骤"><a href="#hexo搭建博客步骤" class="headerlink" title="hexo搭建博客步骤"></a>hexo搭建博客步骤</h2><ol>
+<li>前提是必须安装好git和nodejs；</li>
+<li>执行 “npm install -g hexo-cli”，安装好hexo；</li>
+<li>选定文件夹，通过 “hexo init $folder” 初始化一个名为 $folder 的文件夹；</li>
+<li>cd $folder, 再执行npm install，至此hexo的博客框架已经搭建完成！</li>
+</ol>
+<p>完成上述步骤后，可执行hexo server, 访问<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a>, 会发现一个HelloWorld页面已经可以访问！</p>
+
                 
             </div>
             <hr/>
@@ -487,7 +517,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/JustinLibo.github.io/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/JustinLibo.github.io/about" rel="external nofollow noreferrer">JustinBo</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -497,7 +527,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/022846815.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/022846815.html</a>
+                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/01/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/01/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -510,7 +540,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint polocy. If reproduced, please indicate source
-                    <a href="/JustinLibo.github.io/about" target="_blank">John Doe</a>
+                    <a href="/JustinLibo.github.io/about" target="_blank">JustinBo</a>
                     !
                 </span>
             </div>
@@ -534,7 +564,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/JustinLibo.github.io/tags/study/">
+                                    <span class="chip bg-color">study</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -704,18 +738,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/022846815.html">
+                <a href="/JustinLibo.github.io/2021/01/03/%E5%86%99%E6%96%87%E7%AB%A0.html">
                     <div class="card-image">
                         
                         
-                        <img src="/JustinLibo.github.io/medias/featureimages/2.jpg" class="responsive-img" alt="article title">
+                        <img src="/JustinLibo.github.io/medias/featureimages/6.jpg" class="responsive-img" alt="如何用Hexo优雅的书写文章">
                         
-                        <span class="card-title">article title</span>
+                        <span class="card-title">如何用Hexo优雅的书写文章</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -725,18 +758,29 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-03
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/JustinLibo.github.io/tags/study/">
+                        <span class="chip bg-color">study</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -747,32 +791,44 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/022516107.html">
+                <a href="/JustinLibo.github.io/2020/11/02/Docker%E5%9F%BA%E7%A1%80.html">
                     <div class="card-image">
                         
                         
-                        <img src="/JustinLibo.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/JustinLibo.github.io/medias/featureimages/14.jpg" class="responsive-img" alt="Docker基础">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">Docker基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-02
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/JustinLibo.github.io/tags/Docker/">
+                        <span class="chip bg-color">Docker</span>
+                    </a>
+                    
                 </div>
                 
             </div>
