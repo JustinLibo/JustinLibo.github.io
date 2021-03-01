@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>HandsomeBo&#39;s Blog</title>
   
-  <subtitle>Lnb-Tau</subtitle>
+  <subtitle>新华之父</subtitle>
   <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/atom.xml" rel="self"/>
   
   <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/"/>
-  <updated>2021-02-28T15:48:33.710Z</updated>
+  <updated>2021-03-01T14:19:07.706Z</updated>
   <id>https://github.com/JustinLibo/JustinLibo.github.io.git/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JupyterNotebook的优化与配置</title>
+    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/01/JupyterNotebook%E7%9A%84%E4%BC%98%E5%8C%96%E4%B8%8E%E9%85%8D%E7%BD%AE.html"/>
+    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/01/JupyterNotebook%E7%9A%84%E4%BC%98%E5%8C%96%E4%B8%8E%E9%85%8D%E7%BD%AE.html</id>
+    <published>2021-03-01T14:06:37.000Z</published>
+    <updated>2021-03-01T14:19:07.706Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Jupyter-Notebook使用&quot;&gt;&lt;a href=&quot;#Jupyter-Notebook使用&quot; class=&quot;headerlink&quot; title=&quot;Jupyter Notebook使用&quot;&gt;&lt;/a&gt;Jupyter</summary>
+        
+      
+    
+    
+    
+    <category term="人工智能学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Anaconda" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/Anaconda/"/>
+    
+  </entry>
   
   <entry>
     <title>article title</title>
@@ -47,6 +72,31 @@
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>Anaconda</title>
+    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/01/04/Anaconda.html"/>
+    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/01/04/Anaconda.html</id>
+    <published>2021-01-04T10:18:11.000Z</published>
+    <updated>2021-03-01T14:01:43.511Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-为什么要使用虚拟环境&quot;&gt;&lt;a href=&quot;#1-为什么要使用虚拟环境&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="人工智能学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Anaconda" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/Anaconda/"/>
     
   </entry>
   
@@ -124,10 +174,18 @@
     <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2019/05/31/%E8%8A%B1%E6%B4%A5%E5%8D%97%E8%B7%AF.html"/>
     <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2019/05/31/%E8%8A%B1%E6%B4%A5%E5%8D%97%E8%B7%AF.html</id>
     <published>2019-05-31T10:21:19.000Z</published>
-    <updated>2021-03-01T12:58:22.583Z</updated>
+    <updated>2021-03-01T14:39:53.535Z</updated>
     
     
-    <summary type="html">&lt;p&gt;花津南路, 生活学习四年的地方,我想,总该要留些作为纪念的吧。慢慢地发现这座城市还是比较的美好&lt;/p&gt;</summary>
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;序&quot;&gt;&lt;a href=&quot;#序&quot; class=&quot;headerlink&quot; title=&quot;序&quot;&gt;&lt;/a&gt;序&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;不知道什么时候的事情了, 对拍好看的照片总是有点向往&lt;/li&gt;
+&lt;li&gt;有台相机还是蛮好的 ,</summary>
+        
+      
     
     
     

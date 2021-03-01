@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, HandsomeBo&#39;s Blog">
+    <meta name="keywords" content="JupyterNotebook的优化与配置, HandsomeBo&#39;s Blog">
     <meta name="description" content="热爱生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | HandsomeBo&#39;s Blog</title>
+    <title>JupyterNotebook的优化与配置 | HandsomeBo&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/medias/ironman.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">JupyterNotebook的优化与配置</h1>
                 </div>
             </div>
         </div>
@@ -444,12 +444,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/JustinLibo.github.io/tags/Anaconda/">
+                                <span class="chip bg-color">Anaconda</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                人工智能学习
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -458,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-25
+                    2021-03-01
                 </div>
                 
 
@@ -467,14 +480,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    491
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -489,19 +502,33 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="Jupyter-Notebook使用"><a href="#Jupyter-Notebook使用" class="headerlink" title="Jupyter Notebook使用"></a>Jupyter Notebook使用</h2><p>在新建环境中安装<strong>Jupyter Notebook</strong></p>
+<p>打开<code>Anacanda prompt</code>,键入<br><code>canda activate envy_name</code>，进入新建环境<br>键入<code>pip install Jupyter Notebook</code>。</p>
+<p>建议先将pip升级为最新版本：<code>pip install --upgrade pip</code>。</p>
+<p>也可在<strong>Anacanda</strong>中直接安装不过没有命令行观察直接。<br><strong>Jupyter Notebook</strong>的界面优化</p>
+<p>安装<strong>jupyter-themes</strong>包</p>
+<pre><code>https://github.com/dunovank/jupyter-themes
+</code></pre>
+<p>在Anacanda prompt中键入<br>使用清华源下载速度会快很多。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade jupyterthemes -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple&#x2F;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>在安装过程中出现<br><strong>ERROR: Cannot uninstall [pacakage]. It is a distutils installed project…</strong><br>类似错误，就可以先使用<code>pip install --ignore-installed [package]</code>后，再装。也可在<code>E:\APP\A\Lib\site-packages</code>安装目录下删除所有带有**[pacakage]**的模块。</p>
+<p>设置<strong>jupyter notebook</strong>样式</p>
+<p>安装成功后可以先运行 <code>jt -h</code> 查看帮助文档<br>推荐设置的样式代码为</p>
+<p><code>jt -t grade3 -f fira -fs 16 -cellw 90% -ofs 11 -dfs 11 -T</code></p>
+<h2 id="在Jupyter-Notebook中显示汉字"><a href="#在Jupyter-Notebook中显示汉字" class="headerlink" title="在Jupyter Notebook中显示汉字"></a>在Jupyter Notebook中显示汉字</h2><p>在绘制散点图时，无法正常显示汉字<br><img src="https://img-blog.csdnimg.cn/20210126141052303.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>插入如下两行代码即可解决：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">plt.rcParams[<span class="string">&#x27;font.sans-serif&#x27;</span>] = [<span class="string">&#x27;SimHei&#x27;</span>]</span><br><span class="line">plt.rcParams[<span class="string">&#x27;axes.unicode_minus&#x27;</span>] = False</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<br/>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>若出现以下错误<br>==用来正常显示中文标签显示错误代码plt.rcParams[‘font.sans-serif’] = [‘SimHei’]无法运行==<br>则有以下解决方法：<br>    1.  下载simhei.ttf字体，这里提供一个链接<a target="_blank" rel="noopener" href="http://www.xiazaiziti.com/210356.html">SimHei.ttf</a><br>    2.  找到你的解释器的fonts文件夹下的ttf文件夹，例如我的解释器是Anaconda，在Anaconda的安装目录下，fonts文件夹的位置如上图的路径：D:\AnaInstallDir\Anaconda3\Lib\site-packages\ matplotlib\mpl-data\fonts\ttf。<br>    若解释器是自己安装的Python，文件夹的位置一般为：<br>    C:\Users\用户名\AppData\Local\Programs\ Python\ Python35\Lib\site-packages\matplotlib\mpl-data\fonts\ttf<br>    3. 将下载的SimHei.ttf文件放入ttf文件夹下再运行程序就OK啦（即代码plt.rcParams[‘font.sans-serif’] = [‘SimHei’]可以运行）</p>
+<blockquote>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/xcjjenifer/article/details/105419979">https://blog.csdn.net/xcjjenifer/article/details/105419979</a></p>
+</blockquote>
+<br/>
+运行效果如下：
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><img src="https://img-blog.csdnimg.cn/20210126142136770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 
                 
             </div>
@@ -528,7 +555,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/25/hello-world.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/25/hello-world.html</a>
+                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/01/JupyterNotebook%E7%9A%84%E4%BC%98%E5%8C%96%E4%B8%8E%E9%85%8D%E7%BD%AE.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/01/JupyterNotebook%E7%9A%84%E4%BC%98%E5%8C%96%E4%B8%8E%E9%85%8D%E7%BD%AE.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -565,7 +592,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/JustinLibo.github.io/tags/Anaconda/">
+                                    <span class="chip bg-color">Anaconda</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -735,9 +766,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/JustinLibo.github.io/2021/03/01/JupyterNotebook%E7%9A%84%E4%BC%98%E5%8C%96%E4%B8%8E%E9%85%8D%E7%BD%AE.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/JustinLibo.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="JupyterNotebook的优化与配置">
+                        
+                        <span class="card-title">JupyterNotebook的优化与配置</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    人工智能学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/JustinLibo.github.io/tags/Anaconda/">
+                        <span class="chip bg-color">Anaconda</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/JustinLibo.github.io/2021/02/28/article-title.html">
                     <div class="card-image">
@@ -755,9 +837,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -765,55 +847,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/JustinLibo.github.io/2021/01/04/Anaconda.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/JustinLibo.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="Anaconda">
-                        
-                        <span class="card-title">Anaconda</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-04
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    人工智能学习
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/JustinLibo.github.io/tags/Anaconda/">
-                        <span class="chip bg-color">Anaconda</span>
-                    </a>
-                    
                 </div>
                 
             </div>
