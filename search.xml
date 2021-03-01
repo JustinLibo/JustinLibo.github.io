@@ -30,48 +30,17 @@
     
     
     <entry>
-      <title>如何用Hexo优雅的书写文章</title>
-      <link href="/JustinLibo.github.io/2021/01/03/%E5%86%99%E6%96%87%E7%AB%A0.html"/>
-      <url>/JustinLibo.github.io/2021/01/03/%E5%86%99%E6%96%87%E7%AB%A0.html</url>
+      <title>Anaconda</title>
+      <link href="/JustinLibo.github.io/2021/01/04/Anaconda.html"/>
+      <url>/JustinLibo.github.io/2021/01/04/Anaconda.html</url>
       
-        <content type="html"><![CDATA[<pre><code>MarkDown是什么这里就不多说了，具体参考我的技术博客，同时这里推荐一下我的个人网站，使用的是hexo的butterfly主题：https://lovelijunyi.gitee.io/</code></pre><h2 id="了解文章目录"><a href="#了解文章目录" class="headerlink" title="了解文章目录"></a>了解文章目录</h2><p>所有的文章都是放在主目录下source文件下的_posts目录下的，<code>这里参考我的存放目录E:\mblog\source\_posts</code></p><p>这里作出两点说明：</p><pre><code>1. 该目录下可以再创建目录，系统可以识别到多层文件夹中的文章，方便分类2. 如果用命令生成的新文章一定是在_posts主目录下</code></pre><h2 id="熟悉操作指令"><a href="#熟悉操作指令" class="headerlink" title="熟悉操作指令"></a>熟悉操作指令</h2><p>其实就是一句话，再把生成的文章拖到_posts目录下你自己创建的文件夹即可，文件后缀为.md</p><pre><code>hexo n 你的文章名</code></pre><p><strong>Tips</strong>： 如果嫌麻烦，复制md文件再粘贴也是个好办法</p><h2 id="开始书写文章"><a href="#开始书写文章" class="headerlink" title="开始书写文章"></a>开始书写文章</h2><p>写MarkDown这里推荐<strong>Typora</strong>，非常好用，点开创建的文件，先看看里面有啥</p><hr><p>title: typora-vue-theme主题介绍<br>date: 2018-09-07 09:25:00</p><hr><pre><code>---title: typora-vue-theme主题介绍date: 2018-09-07 09:25:00---</code></pre><p>两个虚线之间的内容就是叫<code>Front-matter</code>，主要是你文章的配置，具体配置如下，这里不同主题不一样，我以<strong>Matery</strong>主题为例</p><p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。<br>配置选项    默认值    描述<br>title    Markdown 的文件标题    文章标题，强烈建议填写此选项<br>date    文件创建时的日期时间    发布时间，强烈建议填写此选项，且最好保证全局唯一<br>author    根 _config.yml 中的 author    文章作者<br>img    featureImages 中的某个值    文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <a href="http://xxx.com/xxx.jpg">http://xxx.com/xxx.jpg</a><br>top    true    推荐文章（文章是否置顶），如果 top 值为 true，则会作为首页推荐文章<br>cover    false    v1.0.2版本新增，表示该文章是否需要加入到首页轮播封面中<br>coverImg    无    v1.0.2版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片<br>password    无    文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 password 的值，该值必须是用 SHA256 加密后的密码，防止被他人识破。前提是在主题的 config.yml 中激活了 verifyPassword 选项<br>toc    true    是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 config.yml 中激活了 toc 选项<br>mathjax    false    是否开启数学公式支持 ，本文章是否开启 mathjax，且需要在主题的 _config.yml 文件中也需要开启才行<br>summary    无    文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要<br>categories    无    文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类<br>tags    无    文章标签，一篇文章可以多个标签<br>keywords    文章标题    文章关键字，SEO 时需要<br>reprintPolicy    cc_by    文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个</p><pre><code>注意:    1.如果 img 属性不填写的话，文章特色图会根据文章标题的 hashcode 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图各有特色。    2.date 的值尽量保证每篇文章是唯一的，因为本主题中 Gitalk 和 Gitment 识别 id 是通过 date 的值来作为唯一标识的。    3.如果要对文章设置阅读验证密码的功能，不仅要在 Front-matter 中设置采用了 SHA256 加密的 password 的值，还需要在主题的 _config.yml 中激活了配置。有些在线的 SHA256 加密的地址，可供你使用：开源中国在线工具、chahuo、站长工具。    4.您可以在文章md文件的 front-matter 中指定 reprintPolicy 来给单个文章配置转载规则</code></pre><p>以下为文章的 <code>Front-matter</code> 示例。</p><p>最全示例</p><hr><p>title: typora-vue-theme主题介绍<br>date: 2018-09-07 09:25:00<br>author: 赵奇<br>img: /source/images/xxx.jpg<br>top: true<br>cover: true<br>coverImg: /images/1.jpg<br>password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92<br>toc: false<br>mathjax: false<br>summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要<br>categories: Markdown<br>tags:</p><ul><li>Typora</li><li>Markdown</li></ul><hr><pre><code>---# 标题title: &#123;&#123; title &#125;&#125;date: &#123;&#123; date &#125;&#125;author: 无敌小小弋# 简述summary:# 使用自定义封面 img: # 是否置顶true，或者去掉top: true# 轮播cover:# 轮播图coverImg: # 标签tags: # 分类categories: # 是否加密文章，SHA256加密password: ---</code></pre><p><strong>Tips：你会发现一个问题，每次<code>hexo n</code>的时候<code>Front-matter</code>中内容少的可怜，那怎么修改默认的格式呢？只要去主目录下找到<code>scaffolds</code>文件夹下找到一个post.md文件修改即可，这里是我的目录C:\Users\user\Desktop\lovelijunyi\scaffolds，例如我的</strong></p><hr><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><p>title: 如何用Hexo优雅的书写文章<br>date: 1609632550000<br>author: 无敌小小弋</p><h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>summary:</p><h1 id="使用自定义封面"><a href="#使用自定义封面" class="headerlink" title="使用自定义封面"></a>使用自定义封面</h1><p>img: </p><h1 id="是否置顶true，或者去掉"><a href="#是否置顶true，或者去掉" class="headerlink" title="是否置顶true，或者去掉"></a>是否置顶true，或者去掉</h1><p>top: true</p><h1 id="轮播"><a href="#轮播" class="headerlink" title="轮播"></a>轮播</h1><p>cover:</p><h1 id="轮播图"><a href="#轮播图" class="headerlink" title="轮播图"></a>轮播图</h1><p>coverImg: </p><h1 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h1><p>tags: </p><h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><p>categories: </p><h1 id="是否加密文章，SHA256加密"><a href="#是否加密文章，SHA256加密" class="headerlink" title="是否加密文章，SHA256加密"></a>是否加密文章，SHA256加密</h1><h2 id="password"><a href="#password" class="headerlink" title="password: "></a>password: </h2><pre><code>12345678910111213141516171819202122</code></pre><p>首行缩进方法</p><pre><code>由于markdowm会自动限定格式，所以缩进显得比较困难，通常我们使用Tab按键或者打空格实现的缩进都只能缩进一小部分，这时可以通过占位符实现更多的缩进效果，使得文章变得美观</code></pre><p>一个汉字占两个空格大小，所以使用四个空格就可以达到首行缩进两个汉字的效果。有如下几种方法：</p><pre><code>一个空格大小的表示：&amp;ensp;或&amp;#8194;，此时只要在相应需要缩进的段落前加上 4个 如上的标记即可，注意要带上分号。两个空格的大小表示：&amp;emsp;或&amp;#8195;，同理，使用2个即可缩进2个汉字，推荐使用该方式。不换行空格：&amp;nbsp;或&amp;#160;，使用4个&amp;#160;即可。</code></pre><p>范例</p><p>不使用任何缩进效果</p><p> 使用Tab实现缩进</p><p> 在前面打上很多空格实现缩进</p><pre><code>使用4个&amp;#160;实现缩进</code></pre><p>  使用2个&emsp;实现缩进</p><p>     使用4个&ensp;实现缩进<br>加粗指令不生效</p><pre><code>**注意：**这是一个指令不生效的演示*\c\d\f*</code></pre><p>以上两种情况都会导致加粗不生效，前者怀疑是符号和加粗语句冲突了，后者斜杠和加粗语句冲突了<br>解决办法</p><pre><code>不要把符号包括进去加粗，注意：这是一个加粗演示后面空开一格（基本能解决大多数冲突），注意： 这是一个加粗演示使用html语句来实现，用strong标签包裹</code></pre>]]></content>
+        <content type="html"><![CDATA[<p>文章目录</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.为什么要使用虚拟环境</span><br><span class="line">2.conda创建虚拟环境</span><br><span class="line">3.pip换源</span><br></pre></td></tr></table></figure><p>1.为什么要使用虚拟环境</p><p>假如当前我们有多个项目A、B、C等等，这些项目中某些项目都需要使用一个相同的库，但是需要的版本却不一样，而这时不管哪个项目使用的都是默认的Python环境，对于这些项目我们只能运行其中一个，如果需要运行另外的项目，必须安装与之相匹配的版本的库。这时我们就可以创建一些完全独立的局部Python环境来实现一个项目使用一个“环境”，这个项目需要安装什么库，只需去其对应的环境中安装即可，这样项目之间就不会互相干扰了，项目的管理也会变得非常方便。<br>2.conda创建虚拟环境</p><pre><code>在创建虚拟环境前，需要先下载Anaconda。下载地址下载好以后，可以打开命令行输入conda -V检验conda是否安装成功以及当前安装的conda的版本信息。创建虚拟环境：打开命令行，使用conda create -n env_name python=x.x(这里输入你想要的版本，如3.5、3.6等)命令创建环境名为env_name的虚拟环境。（出现下图所示时输入y即可）</code></pre><p>创建好虚拟环境以后使用conda activate env_name（创建时的环境名）命令激活虚拟环境（注意:这是Windows下的激活命令）。激活后就可以使用pip install xxx（包名）命令在该虚拟环境下安装你需要的包了。安装好以后，可以使用conda list命令查看已安装的包的信息。若想要退出虚拟环境，输入conda deactivate即可（同样也是Windows下的命令）。存在的虚拟环境可以在Anaconda安装目录里的envs文件下找到，也可以在命令行使用conda env list 或 conda info -e命令查看。</p><pre><code>删除虚拟环境及虚拟环境中的某个包删除虚拟环境:conda remove -n env_name --all删除虚拟环境中的某个包:conda remove --name env_name package_name</code></pre><p>3.pip换源</p><p>因为我们获取的包，默认是直接从pypi官网获取的，而pypi是国外的，所以网速很慢，这时我们换成国内镜像源就可以大大提高安装速度了。</p><p>这里是几个国内源<br>阿里云 <a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a></p><p>中国科技大学 <a href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a></p><p>豆瓣(douban) <a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a></p><p>清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a></p><p>中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a><br>  <br>这里以清华源为例。</p><p>临时换源:在安装命令后加上-i,指定一个pip源,。<br>eg: pip install scrapy -i <a href="https://pypi.tuna.tsinghua.edu.cn/simple">https://pypi.tuna.tsinghua.edu.cn/simple</a></p><p>永久换源:win+R 打开用户目录%HOMEPATH%，在此目录下创建 pip 文件夹，在 pip 目录下创建 pip.ini 文件, 内容如下:<br>————————————————<br>版权声明：本文为CSDN博主「Lfone001」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/weixin_46344368/article/details/105733858">https://blog.csdn.net/weixin_46344368/article/details/105733858</a></p>]]></content>
       
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
       
       
         <tags>
             
-            <tag> study </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>hexo搭建博客步骤</title>
-      <link href="/JustinLibo.github.io/2021/01/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html"/>
-      <url>/JustinLibo.github.io/2021/01/02/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="hexo简介"><a href="#hexo简介" class="headerlink" title="hexo简介"></a>hexo简介</h2><p><a href="https://hexo.io/">hexo</a> 自称为：快速、简洁且高效的博客框架。</p><p>笔者用起来确实还可以，大概介绍下几个特性：</p><ul><li>提供了不同的layout，可将文章存为草稿，需要时publish即可；</li><li>可维护全局的数据，在source/_data文件夹下添加yaml文件，通过site.data获取；</li><li>可指定文件的特有变量，通过<a href="https://hexo.io/zh-cn/docs/front-matter">Front-matter</a>实现；</li><li>支持模板，在scaffolds文件夹下可自定义模板，并进行发布；</li><li>支持标签插件，可以在文章文件中使用标签%%来插入特定内容；</li><li>提供<a href="https://hexo.io/zh-cn/docs/commands">命令行操作</a>，如：hexo init初始化项目、hexo new新建文章、hexo pulish发布草稿文件、hexo generate生成静态文件、hexo server启动服务器；</li></ul><h2 id="hexo搭建博客步骤"><a href="#hexo搭建博客步骤" class="headerlink" title="hexo搭建博客步骤"></a>hexo搭建博客步骤</h2><ol><li>前提是必须安装好git和nodejs；</li><li>执行 “npm install -g hexo-cli”，安装好hexo；</li><li>选定文件夹，通过 “hexo init $folder” 初始化一个名为 $folder 的文件夹；</li><li>cd $folder, 再执行npm install，至此hexo的博客框架已经搭建完成！</li></ol><p>完成上述步骤后，可执行hexo server, 访问<a href="http://localhost:4000/">http://localhost:4000</a>, 会发现一个HelloWorld页面已经可以访问！</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 工具 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> study </tag>
+            <tag> Anaconda </tag>
             
         </tags>
       
@@ -97,6 +66,56 @@
         <tags>
             
             <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何用Hexo优雅的书写文章</title>
+      <link href="/JustinLibo.github.io/2020/01/03/%E5%86%99%E6%96%87%E7%AB%A0.html"/>
+      <url>/JustinLibo.github.io/2020/01/03/%E5%86%99%E6%96%87%E7%AB%A0.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="了解文章目录"><a href="#了解文章目录" class="headerlink" title="了解文章目录"></a>了解文章目录</h2><p>所有的文章都是放在主目录下source文件下的_posts目录下的，<code>这里参考我的存放目录E:\mblog\source\_posts</code></p><p>这里作出两点说明：</p><ol><li><p>该目录下可以再创建目录，系统可以识别到多层文件夹中的文章，方便分类</p></li><li><p>如果用命令生成的新文章一定是在_posts主目录下</p></li></ol><h2 id="熟悉操作指令"><a href="#熟悉操作指令" class="headerlink" title="熟悉操作指令"></a>熟悉操作指令</h2><p>其实就是一句话，再把生成的文章拖到_posts目录下你自己创建的文件夹即可，文件后缀为.md</p><p><code>hexo n 你的文章名</code></p><p><strong>Tips</strong>： 如果嫌麻烦，复制<code>md</code>文件再粘贴也是个好办法</p><h2 id="开始书写文章"><a href="#开始书写文章" class="headerlink" title="开始书写文章"></a>开始书写文章</h2><p>写MarkDown这里推荐<strong>Typora</strong>，非常好用，点开创建的文件，先看看里面有啥<br><code>\---</code><br><code>title: typora-vue-theme主题介绍</code><br><code>date: 2018-09-07 09:25:00</code><br><code>\---</code></p><p>两个虚线之间的内容就是叫<code>Front-matter</code>，主要是你文章的配置，具体配置如下，这里不同主题不一样，我以<strong>Matery</strong>主题为例</p><p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p><table><thead><tr><th>配置选项</th><th>默认值</th><th>描述</th></tr></thead><tbody><tr><td>title</td><td>Markdown 的文件标题</td><td>文章标题，强烈建议填写此选项</td></tr><tr><td>date</td><td>文件创建时的日期时间</td><td>发布时间，强烈建议填写此选项，且最好保证全局唯一</td></tr><tr><td>author</td><td>根 _config.yml 中的 author</td><td>文章作者</td></tr><tr><td>img</td><td>featureImages 中的某个值</td><td>文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <a href="http://xxx.com/xxx.jpg">http://xxx.com/xxx.jpg</a></td></tr><tr><td>top</td><td>true</td><td>推荐文章（文章是否置顶），如果 top 值为 true，则会作为首页推荐文章</td></tr><tr><td>cover</td><td>false</td><td>v1.0.2版本新增，表示该文章是否需要加入到首页轮播封面中</td></tr><tr><td>coverImg</td><td>无</td><td>v1.0.2版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td></tr><tr><td>password</td><td>无</td><td>文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 password 的值，该值必须是用 SHA256 加密后的密码，防止被他人识破。前提是在主题的 config.yml 中激活了 verifyPassword 选项</td></tr><tr><td>toc</td><td>true</td><td>是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 config.yml 中激活了 toc 选项</td></tr><tr><td>mathjax</td><td>false</td><td>是否开启数学公式支持 ，本文章是否开启 mathjax，且需要在主题的 _config.yml 文件中也需要开启才行</td></tr><tr><td>summary</td><td>无</td><td>文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</td></tr><tr><td>categories</td><td>无</td><td>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td></tr><tr><td>tags</td><td>无</td><td>文章标签，一篇文章可以多个标签</td></tr><tr><td>keywords</td><td>文章标题</td><td>文章关键字，SEO 时需要</td></tr><tr><td>reprintPolicy</td><td>cc_by</td><td>文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个</td></tr></tbody></table><blockquote><p>注意:<br>   1.如果 img 属性不填写的话，文章特色图会根据文章标题的 hashcode 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图各有特色。<br>   2.date 的值尽量保证每篇文章是唯一的，因为本主题中 Gitalk 和 Gitment 识别 id 是通过 date 的值来作为唯一标识的。<br>   3.如果要对文章设置阅读验证密码的功能，不仅要在 Front-matter 中设置采用了 SHA256 加密的 password 的值，还需要在主题的 _config.yml 中激活了配置。有些在线的 SHA256 加密的地址，可供你使用：开源中国在线工具、chahuo、站长工具。<br>   4.您可以在文章md文件的 front-matter 中指定 reprintPolicy 来给单个文章配置转载规则</p></blockquote><p>以下为文章的 <code>Front-matter</code> 示例。</p><p><strong>最全示例</strong></p><hr><hr><ul><li><pre class=" language-html"><code class="language-html">title: typora-vue-theme主题介绍date: 2018-09-07 09:25:00author: 赵奇img: /source/images/xxx.jpgtop: truecover: truecoverImg: /images/1.jpgpassword: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92toc: falsemathjax: falsesummary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要categories: Markdowntags:  - Typora  - Markdown</code></pre></li></ul><hr><p><strong>Tips：你会发现一个问题，每次<code>hexo n</code>的时候<code>Front-matter</code>中内容少的可怜，那怎么修改默认的格式呢？只要去主目录下找到<code>scaffolds</code>文件夹下找到一个post.md文件修改即可</strong></p><h3 id="首行缩进方法"><a href="#首行缩进方法" class="headerlink" title="首行缩进方法"></a>首行缩进方法</h3><blockquote><p>由于markdowm会自动限定格式，所以<strong>缩进</strong>显得比较困难，通常我们使用Tab按键或者打空格实现的缩进都只能缩进一小部分，这时可以通过<strong>占位符</strong>实现更多的缩进效果，使得文章变得美观</p></blockquote><p>一个汉字占两个空格大小，所以使用四个空格就可以达到首行缩进两个汉字的效果。有如下几种方法：</p><ol><li><p>一个空格大小的表示：<code> </code>或<code> </code>，此时只要在相应需要缩进的段落前加上 <strong>4个</strong> 如上的标记即可，<strong>注意要带上分号</strong></p></li><li><p>两个空格的大小表示：<code> </code>或<code> </code>，同理，使用2个即可缩进2个汉字，<strong>推荐使用该方式</strong>。</p></li><li><p>不换行空格：<code> </code>或<code> </code>，使用4个<code> </code>即可。</p></li></ol><h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><p>不使用任何缩进效果</p><p> 使用<strong>Tab</strong>实现缩进</p><p>在前面<strong>打上很多空格</strong>实现缩进</p><p>  使用4个 &amp;#160 实现缩进</p><p>  使用2个 &amp;emsp 实现缩进</p><p>     使用 4个&amp;ensp 实现缩进</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo搭建博客步骤</title>
+      <link href="/JustinLibo.github.io/2020/01/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html"/>
+      <url>/JustinLibo.github.io/2020/01/01/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="hexo简介"><a href="#hexo简介" class="headerlink" title="hexo简介"></a>hexo简介</h2><p><a href="https://hexo.io/">hexo</a> 自称为：快速、简洁且高效的博客框架。</p><p>笔者用起来确实还可以，大概介绍下几个特性：</p><ul><li>提供了不同的layout，可将文章存为草稿，需要时publish即可；</li><li>可维护全局的数据，在source/_data文件夹下添加yaml文件，通过site.data获取；</li><li>可指定文件的特有变量，通过<a href="https://hexo.io/zh-cn/docs/front-matter">Front-matter</a>实现；</li><li>支持模板，在scaffolds文件夹下可自定义模板，并进行发布；</li><li>支持标签插件，可以在文章文件中使用标签%%来插入特定内容；</li><li>提供<a href="https://hexo.io/zh-cn/docs/commands">命令行操作</a>，如：hexo init初始化项目、hexo new新建文章、hexo pulish发布草稿文件、hexo generate生成静态文件、hexo server启动服务器；</li></ul><h2 id="hexo搭建博客步骤"><a href="#hexo搭建博客步骤" class="headerlink" title="hexo搭建博客步骤"></a>hexo搭建博客步骤</h2><ol><li>前提是必须安装好git和nodejs；</li><li>执行 “npm install -g hexo-cli”，安装好hexo；</li><li>选定文件夹，通过 “hexo init $folder” 初始化一个名为 $folder 的文件夹；</li><li>cd $folder, 再执行npm install，至此hexo的博客框架已经搭建完成！</li></ol><p>完成上述步骤后，可执行hexo server, 访问<a href="http://localhost:4000/">http://localhost:4000</a>, 会发现一个HelloWorld页面已经可以访问！</p><p><img src="https://cdn.jsdelivr.net/gh/JoruaChan/BlogImages/fast-build-blog/hexo_build_page.png"></p><h2 id="选用volantis主题"><a href="#选用volantis主题" class="headerlink" title="选用volantis主题"></a>选用volantis主题</h2><ol><li>设置项目使用的主题: 项目根目录下的_config.yml文件中设置 theme: volantis;</li><li>如果Hexo版本在5.0.2及以上，可以直接通过npm i hexo-theme-volantis进行安装；笔者为了项目的可读性，采用了源代码拷贝到theme文件夹的方案（记得删除.git文件夹,否则git提交时会出问题!）</li><li>按照依赖的插件：npm i hexo-generator-search hexo-generator-json-content(站内搜索)，npm i hexo-renderer-stylus（Stylus 渲染器）</li></ol><p><img src="https://cdn.jsdelivr.net/gh/JoruaChan/BlogImages/fast-build-blog/volantis_config.png"></p><p>完成上述步骤后执行hexo server, 访问<a href="http://localhost:4000/">http://localhost:4000</a>, 是不是发现端庄不失典雅的博客网站已经完成了！</p><p><img src="https://cdn.jsdelivr.net/gh/JoruaChan/BlogImages/fast-build-blog/volantis_preview.png"></p><h2 id="尝试新建文章"><a href="#尝试新建文章" class="headerlink" title="尝试新建文章"></a>尝试新建文章</h2><p>执行 hexo new post $newPostName，会在_post文件夹下新建一个名为$newPostName的md文件，一个新的文章便建立完成。</p><p>这时你只需要关注你的博文输出即可啦！</p><p><img src="https://cdn.jsdelivr.net/gh/JoruaChan/BlogImages/fast-build-blog/new_post.png" alt="newPost"></p><h2 id="发布至GitHub-Pages"><a href="#发布至GitHub-Pages" class="headerlink" title="发布至GitHub Pages"></a>发布至GitHub Pages</h2><p>如果你期望能通过GitHub Pages来访问你的博客网站，做如下几步：</p><ol><li>通过GitHub新建一个repository，名为：&lt;你的 GitHub 用户名&gt;.github.io；</li><li>本地检出该repository；</li><li>在博客源码的项目中执行命令：hexo generate –deploy，会生成public文件夹，该文件夹里便是博客所有的静态页面文件；</li><li>将public文件夹中的文件全部拷贝到新建repository的master分支下；</li><li>将master文件推送至远程master分支即可！</li><li>静待一会，访问：http://&lt;你的 GitHub 用户名&gt;.github.io便能访问你自定义的博客了！</li></ol><blockquote><p>如果你有自己的域名，可以在域名解析配置成 记录类型：CNAME，记录值：&lt;你的 GitHub 用户名&gt;.github.io。 注意了！！！ 此时还需要在GitHub Page项目中根目录下加上名为CNAME的文件，文件内容为你自己的域名。</p></blockquote><p>正如你看到的，搭建一个个人博客网站就是如此便捷！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
             
         </tags>
       
