@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="article title, HandsomeBo&#39;s Blog">
+    <meta name="keywords" content="如何用Hexo优雅的书写文章, HandsomeBo&#39;s Blog">
     <meta name="description" content="热爱生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>article title | HandsomeBo&#39;s Blog</title>
+    <title>如何用Hexo优雅的书写文章 | HandsomeBo&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/medias/ironman.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">article title</h1>
+                    <h1 class="description center-align post-title">如何用Hexo优雅的书写文章</h1>
                 </div>
             </div>
         </div>
@@ -444,12 +444,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/JustinLibo.github.io/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/JustinLibo.github.io/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                工具
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -458,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-28
+                    2020-01-03
                 </div>
                 
 
@@ -467,14 +480,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -489,7 +502,152 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="了解文章目录"><a href="#了解文章目录" class="headerlink" title="了解文章目录"></a>了解文章目录</h2><p>所有的文章都是放在主目录下source文件下的_posts目录下的，<code>这里参考我的存放目录E:\mblog\source\_posts</code></p>
+<p>这里作出两点说明：</p>
+<ol>
+<li><p>该目录下可以再创建目录，系统可以识别到多层文件夹中的文章，方便分类</p>
+</li>
+<li><p>如果用命令生成的新文章一定是在_posts主目录下</p>
+</li>
+</ol>
+<h2 id="熟悉操作指令"><a href="#熟悉操作指令" class="headerlink" title="熟悉操作指令"></a>熟悉操作指令</h2><p>其实就是一句话，再把生成的文章拖到_posts目录下你自己创建的文件夹即可，文件后缀为.md</p>
+<p><code>hexo n 你的文章名</code></p>
+<p><strong>Tips</strong>： 如果嫌麻烦，复制<code>md</code>文件再粘贴也是个好办法</p>
+<h2 id="开始书写文章"><a href="#开始书写文章" class="headerlink" title="开始书写文章"></a>开始书写文章</h2><p>写MarkDown这里推荐<strong>Typora</strong>，非常好用，点开创建的文件，先看看里面有啥<br><code>\---</code><br><code>title: typora-vue-theme主题介绍</code><br><code>date: 2018-09-07 09:25:00</code><br><code>\---</code></p>
+<p>两个虚线之间的内容就是叫<code>Front-matter</code>，主要是你文章的配置，具体配置如下，这里不同主题不一样，我以<strong>Matery</strong>主题为例</p>
+<p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
+<table>
+<thead>
+<tr>
+<th>配置选项</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>Markdown 的文件标题</td>
+<td>文章标题，强烈建议填写此选项</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件创建时的日期时间</td>
+<td>发布时间，强烈建议填写此选项，且最好保证全局唯一</td>
+</tr>
+<tr>
+<td>author</td>
+<td>根 _config.yml 中的 author</td>
+<td>文章作者</td>
+</tr>
+<tr>
+<td>img</td>
+<td>featureImages 中的某个值</td>
+<td>文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <a target="_blank" rel="noopener" href="http://xxx.com/xxx.jpg">http://xxx.com/xxx.jpg</a></td>
+</tr>
+<tr>
+<td>top</td>
+<td>true</td>
+<td>推荐文章（文章是否置顶），如果 top 值为 true，则会作为首页推荐文章</td>
+</tr>
+<tr>
+<td>cover</td>
+<td>false</td>
+<td>v1.0.2版本新增，表示该文章是否需要加入到首页轮播封面中</td>
+</tr>
+<tr>
+<td>coverImg</td>
+<td>无</td>
+<td>v1.0.2版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td>password</td>
+<td>无</td>
+<td>文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 password 的值，该值必须是用 SHA256 加密后的密码，防止被他人识破。前提是在主题的 config.yml 中激活了 verifyPassword 选项</td>
+</tr>
+<tr>
+<td>toc</td>
+<td>true</td>
+<td>是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 config.yml 中激活了 toc 选项</td>
+</tr>
+<tr>
+<td>mathjax</td>
+<td>false</td>
+<td>是否开启数学公式支持 ，本文章是否开启 mathjax，且需要在主题的 _config.yml 文件中也需要开启才行</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>无</td>
+<td>文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>无</td>
+<td>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>无</td>
+<td>文章标签，一篇文章可以多个标签</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>文章标题</td>
+<td>文章关键字，SEO 时需要</td>
+</tr>
+<tr>
+<td>reprintPolicy</td>
+<td>cc_by</td>
+<td>文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意:<br>   1.如果 img 属性不填写的话，文章特色图会根据文章标题的 hashcode 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图各有特色。<br>   2.date 的值尽量保证每篇文章是唯一的，因为本主题中 Gitalk 和 Gitment 识别 id 是通过 date 的值来作为唯一标识的。<br>   3.如果要对文章设置阅读验证密码的功能，不仅要在 Front-matter 中设置采用了 SHA256 加密的 password 的值，还需要在主题的 _config.yml 中激活了配置。有些在线的 SHA256 加密的地址，可供你使用：开源中国在线工具、chahuo、站长工具。<br>   4.您可以在文章md文件的 front-matter 中指定 reprintPolicy 来给单个文章配置转载规则</p>
+</blockquote>
+<p>以下为文章的 <code>Front-matter</code> 示例。</p>
+<p><strong>最全示例</strong></p>
+<hr>
+<hr>
+<ul>
+<li><pre class=" language-html"><code class="language-html">title: typora-vue-theme主题介绍
+date: 2018-09-07 09:25:00
+author: 赵奇
+img: /source/images/xxx.jpg
+top: true
+cover: true
+coverImg: /images/1.jpg
+password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+toc: false
+mathjax: false
+summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+categories: Markdown
+tags:
+
+  - Typora
+  - Markdown
+</code></pre>
+</li>
+</ul>
+<hr>
+<p><strong>Tips：你会发现一个问题，每次<code>hexo n</code>的时候<code>Front-matter</code>中内容少的可怜，那怎么修改默认的格式呢？只要去主目录下找到<code>scaffolds</code>文件夹下找到一个post.md文件修改即可</strong></p>
+<h3 id="首行缩进方法"><a href="#首行缩进方法" class="headerlink" title="首行缩进方法"></a>首行缩进方法</h3><blockquote>
+<p>由于markdowm会自动限定格式，所以<strong>缩进</strong>显得比较困难，通常我们使用Tab按键或者打空格实现的缩进都只能缩进一小部分，这时可以通过<strong>占位符</strong>实现更多的缩进效果，使得文章变得美观</p>
+</blockquote>
+<p>一个汉字占两个空格大小，所以使用四个空格就可以达到首行缩进两个汉字的效果。有如下几种方法：</p>
+<ol>
+<li><p>一个空格大小的表示：<code> </code>或<code> </code>，此时只要在相应需要缩进的段落前加上 <strong>4个</strong> 如上的标记即可，<strong>注意要带上分号</strong></p>
+</li>
+<li><p>两个空格的大小表示：<code> </code>或<code> </code>，同理，使用2个即可缩进2个汉字，<strong>推荐使用该方式</strong>。</p>
+</li>
+<li><p>不换行空格：<code> </code>或<code> </code>，使用4个<code> </code>即可。</p>
+</li>
+</ol>
+<h4 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h4><p>不使用任何缩进效果</p>
+<p> 使用<strong>Tab</strong>实现缩进</p>
+<p>在前面<strong>打上很多空格</strong>实现缩进</p>
+<p>  使用4个 &amp;#160 实现缩进</p>
+<p>  使用2个 &amp;emsp 实现缩进</p>
+<p>     使用 4个&amp;ensp 实现缩进</p>
+
                 
             </div>
             <hr/>
@@ -505,7 +663,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/JustinLibo.github.io/about" rel="external nofollow noreferrer">Justin Bo</a>
+                    <a href="/JustinLibo.github.io/about" rel="external nofollow noreferrer">JustinBo</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -515,7 +673,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/28/article-title.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/28/article-title.html</a>
+                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2020/01/03/62216.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2020/01/03/62216.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -528,7 +686,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/JustinLibo.github.io/about" target="_blank">Justin Bo</a>
+                    <a href="/JustinLibo.github.io/about" target="_blank">JustinBo</a>
                     !
                 </span>
             </div>
@@ -552,7 +710,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/JustinLibo.github.io/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -726,31 +888,31 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/03/01/JupyterNotebook%E7%9A%84%E4%BC%98%E5%8C%96%E4%B8%8E%E9%85%8D%E7%BD%AE.html">
+                <a href="/JustinLibo.github.io/2020/11/02/16621.html">
                     <div class="card-image">
                         
                         
-                        <img src="/JustinLibo.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="JupyterNotebook的优化与配置">
+                        <img src="/JustinLibo.github.io/medias/featureimages/14.jpg" class="responsive-img" alt="Docker基础">
                         
-                        <span class="card-title">JupyterNotebook的优化与配置</span>
+                        <span class="card-title">Docker基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-02
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    人工智能学习
+                            <a href="/JustinLibo.github.io/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
                                 </a>
                             
                             
@@ -760,8 +922,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/JustinLibo.github.io/tags/Anaconda/">
-                        <span class="chip bg-color">Anaconda</span>
+                    <a href="/JustinLibo.github.io/tags/Docker/">
+                        <span class="chip bg-color">Docker</span>
                     </a>
                     
                 </div>
@@ -775,32 +937,44 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/02/25/hello-world.html">
+                <a href="/JustinLibo.github.io/2020/01/01/63100.html">
                     <div class="card-image">
                         
                         
-                        <img src="/JustinLibo.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/JustinLibo.github.io/medias/featureimages/0.jpg" class="responsive-img" alt="hexo搭建博客步骤">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">hexo搭建博客步骤</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            使用hexo搭建一个快速间接且高效的博客
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-01
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Justin Bo
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/JustinLibo.github.io/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1160,6 +1334,10 @@ $(function () {
     
     
 
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/JustinLibo.github.io/libs/background/ribbon.min.js" async="async"></script>
     
 
     

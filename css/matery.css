@@ -577,6 +577,7 @@ header .go-back i {
 
 .bg-cover .title {
     font-size: 4rem;
+    font-weight: bold;
     line-height: 1.2em;
     margin-bottom: 20px;
     position: relative;
@@ -591,6 +592,7 @@ header .go-back i {
 
 .bg-cover .post-title {
     margin: 0 auto;
+    font-weight: bold;
     font-size: 2.5rem;
     font-weight: 400;
 }
