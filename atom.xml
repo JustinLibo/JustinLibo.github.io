@@ -105,7 +105,7 @@
     <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2020/11/02/16621.html"/>
     <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2020/11/02/16621.html</id>
     <published>2020-11-02T03:19:08.000Z</published>
-    <updated>2021-02-28T15:48:33.716Z</updated>
+    <updated>2021-03-02T07:31:00.648Z</updated>
     
     
     <summary type="html">&lt;p&gt;Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任何流行的 Linux 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口（类似 iPhone 的 app）,更重要的是容器性能开销极低。&lt;/p&gt;</summary>
@@ -133,6 +133,32 @@
     
     
     <category term="大学生活" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据库三范式</title>
+    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2020/03/02/15177.html"/>
+    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2020/03/02/15177.html</id>
+    <published>2020-03-02T03:45:00.000Z</published>
+    <updated>2021-03-02T07:40:14.071Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="数据库" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
@@ -166,7 +192,7 @@
     <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2020/01/01/63100.html"/>
     <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2020/01/01/63100.html</id>
     <published>2020-01-01T03:19:08.000Z</published>
-    <updated>2021-03-01T10:04:59.400Z</updated>
+    <updated>2021-03-02T07:31:16.604Z</updated>
     
     
       
