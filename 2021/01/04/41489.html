@@ -5,7 +5,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Anaconda, HandsomeBo&#39;s Blog">
+    <meta name="keywords" content="Anaconda的介绍与使用, HandsomeBo&#39;s Blog">
     <meta name="description" content="热爱生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Anaconda | HandsomeBo&#39;s Blog</title>
+    <title>Anaconda的介绍与使用 | HandsomeBo&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/medias/ironman.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Anaconda</h1>
+                    <h1 class="description center-align post-title">Anaconda的介绍与使用</h1>
                 </div>
             </div>
         </div>
@@ -458,8 +458,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                人工智能学习
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/" class="post-category">
+                                人工智能基础
+                            </a>
+                        
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                工具
                             </a>
                         
                     </div>
@@ -506,10 +510,7 @@
 <h2 id="2-conda创建虚拟环境"><a href="#2-conda创建虚拟环境" class="headerlink" title="2.conda创建虚拟环境"></a>2.conda创建虚拟环境</h2><p>在创建虚拟环境前，需要先下载<strong>Anaconda</strong>。<br>下载好以后，可以打开命令行输入<code>conda -V</code>检验<strong>conda</strong>是否安装成功以及当前安装的<strong>conda</strong>的版本信息。</p>
 <p>创建虚拟环境：<br>打开命令行，使用<code>conda create -n env_name python=x.x</code>(这里输入你想要的版本，如3.5、3.6等)命令创建环境名为<code>env_name</code>的虚拟环境。（出现下图所示时输入y即可</p>
 <p>创建好虚拟环境以后使用<code>conda activate env_name</code>（创建时的环境名）命令激活虚拟环境（注意:这是Windows下的激活命令）。激活后就可以使用<code>pip install xxx</code>（包名）命令在该虚拟环境下安装你需要的包了。安装好以后，可以使用<code>conda list</code>命令查看已安装的包的信息。若想要退出虚拟环境，输入c<code>onda deactivate</code>即可（同样也是Windows下的命令）。存在的虚拟环境可以在<strong>Anaconda</strong>安装目录里的<strong>envs</strong>文件下找到，也可以在命令行使用<code>conda env list</code> 或 <code>conda info -e</code>命令查看。</p>
-<pre class=" language-html"><code class="language-html">删除虚拟环境及虚拟环境中的某个包
-删除虚拟环境:conda remove -n env_name --all
-删除虚拟环境中的某个包:conda remove --name env_name package_name
-</code></pre>
+<p>删除虚拟环境及虚拟环境中的某个包<br>删除虚拟环境:<code>conda remove -n env_name --all</code><br>删除虚拟环境中的某个包:<code>conda remove --name env_name package_name</code></p>
 <h2 id="3-pip换源"><a href="#3-pip换源" class="headerlink" title="3.pip换源"></a>3.pip换源</h2><p>因为我们获取的包，默认是直接从pypi官网获取的，而pypi是国外的，所以网速很慢，这时我们换成国内镜像源就可以大大提高安装速度了。</p>
 <p>这里是几个国内源<br>阿里云 <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a></p>
 <p>中国科技大学 <a target="_blank" rel="noopener" href="https://pypi.mirrors.ustc.edu.cn/simple/">https://pypi.mirrors.ustc.edu.cn/simple/</a></p>
@@ -764,13 +765,13 @@ trusted-host = pypi.tuna.tsinghua.edu.cn
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/02/25/16107.html">
+                <a href="/JustinLibo.github.io/2021/03/01/18760.html">
                     <div class="card-image">
                         
                         
-                        <img src="/JustinLibo.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/JustinLibo.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="JupyterNotebook的优化与配置">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">JupyterNotebook的优化与配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -781,15 +782,31 @@ trusted-host = pypi.tuna.tsinghua.edu.cn
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Justin Bo
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    人工智能基础
+                                </a>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/JustinLibo.github.io/tags/Anaconda/">
+                        <span class="chip bg-color">Anaconda</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -804,7 +821,7 @@ trusted-host = pypi.tuna.tsinghua.edu.cn
                 <a href="/JustinLibo.github.io/2021/01/03/25359.html">
                     <div class="card-image">
                         
-                        <img src="https://blog.chasingwind.top/ElasticSearch.png" class="responsive-img" alt="人工智能与机器学习概念、应用、实现方法">
+                        <img src="https://blog.chasingwind.top/default_21.jpg" class="responsive-img" alt="人工智能与机器学习概念、应用、实现方法">
                         
                         <span class="card-title">人工智能与机器学习概念、应用、实现方法</span>
                     </div>
@@ -984,7 +1001,7 @@ trusted-host = pypi.tuna.tsinghua.edu.cn
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.4k</span>&nbsp;字
+                class="white-color">14.7k</span>&nbsp;字
             
             
             
@@ -1206,9 +1223,9 @@ $(function () {
     
 
     
-    <script src="/JustinLibo.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/JustinLibo.github.io/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script src="/JustinLibo.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/JustinLibo.github.io/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":300},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/JustinLibo.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/JustinLibo.github.io/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":300},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>

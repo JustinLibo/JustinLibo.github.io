@@ -5,7 +5,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="大四个人总结, HandsomeBo&#39;s Blog">
+    <meta name="keywords" content="在JupyterNotebook中显示汉字, HandsomeBo&#39;s Blog">
     <meta name="description" content="热爱生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>大四个人总结 | HandsomeBo&#39;s Blog</title>
+    <title>在JupyterNotebook中显示汉字 | HandsomeBo&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/medias/ironman.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -312,7 +312,7 @@
 <script src="/JustinLibo.github.io/libs/cryptojs/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '28740';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">大四个人总结</h1>
+                    <h1 class="description center-align post-title">在JupyterNotebook中显示汉字</h1>
                 </div>
             </div>
         </div>
@@ -446,8 +446,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/JustinLibo.github.io/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/">
-                                <span class="chip bg-color">大学生活</span>
+                            <a href="/JustinLibo.github.io/tags/Anaconda/">
+                                <span class="chip bg-color">Anaconda</span>
                             </a>
                         
                     </div>
@@ -458,8 +458,12 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/JustinLibo.github.io/categories/%E8%8A%B1%E6%B4%A5%E5%8D%97%E8%B7%AF/" class="post-category">
-                                花津南路
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/" class="post-category">
+                                人工智能基础
+                            </a>
+                        
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                工具
                             </a>
                         
                     </div>
@@ -471,7 +475,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-24
+                    2021-03-04
                 </div>
                 
 
@@ -480,7 +484,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    254
                 </div>
                 
 
@@ -502,7 +506,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h1 id="在Jupyter-Notebook中显示汉字"><a href="#在Jupyter-Notebook中显示汉字" class="headerlink" title="在Jupyter Notebook中显示汉字"></a>在Jupyter Notebook中显示汉字</h1><p>在绘制散点图时，无法正常显示汉字<br><img src="https://img-blog.csdnimg.cn/20210126141052303.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>插入如下两行代码即可解决：</p>
+<pre class=" language-bash"><code class="language-bash">plt.rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span>
+plt.rcParams<span class="token punctuation">[</span><span class="token string">'axes.unicode_minus'</span><span class="token punctuation">]</span> <span class="token operator">=</span> False
+</code></pre>
+<br/>
+
+<p>若出现以下错误<br>==用来正常显示中文标签显示错误代码plt.rcParams[‘font.sans-serif’] = [‘SimHei’]无法运行==<br>则有以下解决方法：<br>    1.  下载simhei.ttf字体，这里提供一个链接<a target="_blank" rel="noopener" href="http://www.xiazaiziti.com/210356.html">SimHei.ttf</a><br>    2.  找到你的解释器的fonts文件夹下的ttf文件夹，例如我的解释器是Anaconda，在Anaconda的安装目录下，fonts文件夹的位置如上图的路径：D:\AnaInstallDir\Anaconda3\Lib\site-packages\ matplotlib\mpl-data\fonts\ttf。<br>    若解释器是自己安装的Python，文件夹的位置一般为：<br>    C:\Users\用户名\AppData\Local\Programs\ Python\ Python35\Lib\site-packages\matplotlib\mpl-data\fonts\ttf<br>    3. 将下载的SimHei.ttf文件放入ttf文件夹下再运行程序就OK啦（即代码plt.rcParams[‘font.sans-serif’] = [‘SimHei’]可以运行）</p>
+<blockquote>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/xcjjenifer/article/details/105419979">https://blog.csdn.net/xcjjenifer/article/details/105419979</a></p>
+</blockquote>
+<br/>
+运行效果如下：
+
+<p><img src="https://img-blog.csdnimg.cn/20210126142136770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70"></p>
+
                 
             </div>
             <hr/>
@@ -528,7 +546,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2020/06/24/15280.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2020/06/24/15280.html</a>
+                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/04/34495.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/04/34495.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -566,8 +584,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/JustinLibo.github.io/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/">
-                                    <span class="chip bg-color">大学生活</span>
+                                <a href="/JustinLibo.github.io/tags/Anaconda/">
+                                    <span class="chip bg-color">Anaconda</span>
                                 </a>
                             
                         </div>
@@ -739,28 +757,84 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/01/03/25359.html">
+                <a href="/JustinLibo.github.io/2021/03/04/34495.html">
                     <div class="card-image">
                         
-                        <img src="https://blog.chasingwind.top/ElasticSearch.png" class="responsive-img" alt="人工智能与机器学习概念、应用、实现方法">
                         
-                        <span class="card-title">人工智能与机器学习概念、应用、实现方法</span>
+                        <img src="/JustinLibo.github.io/medias/featureimages/7.jpg" class="responsive-img" alt="在JupyterNotebook中显示汉字">
+                        
+                        <span class="card-title">在JupyterNotebook中显示汉字</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            人工智能—维基百科定义：人工智能，亦称智机器智能，指由人制造出来的机器所表现出来的智能。人工智能的核心问题包括建构能够跟人类似甚至超卓的推理、知识、规划、学习、交流、感知、移物、使用工具和操控机械的能力等
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-03
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    人工智能基础
+                                </a>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/JustinLibo.github.io/tags/Anaconda/">
+                        <span class="chip bg-color">Anaconda</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/JustinLibo.github.io/2021/03/03/7097.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/JustinLibo.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="CNN实现猫狗图像分类">
+                        
+                        <span class="card-title">CNN实现猫狗图像分类</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -780,52 +854,12 @@
                         <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/JustinLibo.github.io/2020/03/02/15177.html">
-                    <div class="card-image">
-                        
-                        <img src="http://chasingwind.top/medias/banner/4.jpg" class="responsive-img" alt="数据库三范式">
-                        
-                        <span class="card-title">数据库三范式</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            为了建立冗余较小、结构合理的数据库，设计数据库时必须遵循一定的规则。在关系型数据库中这种规则就称为范式。范式是符合某一种设计要求的总结。要想设计一个结构合理的关系型数据库，必须满足一定的范式。
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-02
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/JustinLibo.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="post-category">
-                                    数据库
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
+                    <a href="/JustinLibo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
+                    </a>
                     
-                    <a href="/JustinLibo.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/JustinLibo.github.io/tags/CNN/">
+                        <span class="chip bg-color">CNN</span>
                     </a>
                     
                 </div>
@@ -974,7 +1008,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.4k</span>&nbsp;字
+                class="white-color">14.7k</span>&nbsp;字
             
             
             
@@ -1196,9 +1230,9 @@ $(function () {
     
 
     
-    <script src="/JustinLibo.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/JustinLibo.github.io/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script src="/JustinLibo.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/JustinLibo.github.io/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":300},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/JustinLibo.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/JustinLibo.github.io/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":300},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>

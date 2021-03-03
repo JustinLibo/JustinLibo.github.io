@@ -6,7 +6,7 @@
   <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/atom.xml" rel="self"/>
   
   <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/"/>
-  <updated>2021-03-03T02:24:13.233Z</updated>
+  <updated>2021-03-03T16:10:25.357Z</updated>
   <id>https://github.com/JustinLibo/JustinLibo.github.io.git/</id>
   
   <author>
@@ -17,11 +17,97 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>在JupyterNotebook中显示汉字</title>
+    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/04/34495.html"/>
+    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/04/34495.html</id>
+    <published>2021-03-03T16:04:31.000Z</published>
+    <updated>2021-03-03T16:10:25.357Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;在Jupyter-Notebook中显示汉字&quot;&gt;&lt;a href=&quot;#在Jupyter-Notebook中显示汉字&quot; class=&quot;headerlink&quot; title=&quot;在Jupyter Notebook中显示汉字&quot;&gt;&lt;/a&gt;在Jupyter</summary>
+        
+      
+    
+    
+    
+    <category term="人工智能基础" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="工具" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="Anaconda" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/Anaconda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CNN实现猫狗图像分类</title>
+    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7097.html"/>
+    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7097.html</id>
+    <published>2021-03-03T01:37:39.000Z</published>
+    <updated>2021-03-03T16:03:40.382Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;前文中已经对CNN做了详细的介绍，下面开始实战：&lt;/p&gt;
+&lt;h2 id=&quot;实战一：&quot;&gt;&lt;a href=&quot;#实战一：&quot; class=&quot;headerlink&quot; title=&quot;实战一：&quot;&gt;&lt;/a&gt;&lt;strong&gt;实战一：&lt;/strong&gt;&lt;/h2&gt;&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="人工智能基础" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="机器学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="深度学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="CNN" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/CNN/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MLP实现图像多分类</title>
+    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7096.html"/>
+    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7096.html</id>
+    <published>2021-03-03T01:37:39.000Z</published>
+    <updated>2021-03-03T09:28:01.983Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;多层感知器（MLP）&quot;&gt;&lt;a href=&quot;#多层感知器（MLP）&quot; class=&quot;headerlink&quot; title=&quot;多层感知器（MLP）&quot;&gt;&lt;/a&gt;多层感知器（MLP）&lt;/h1&gt;&lt;h2 id=&quot;问题引入：&quot;&gt;&lt;a href=&quot;#问题引入：&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="人工智能基础" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="机器学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="深度学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="多层感知机" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>机器学习：聚类</title>
     <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7098.html"/>
     <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7098.html</id>
     <published>2021-03-03T01:37:39.000Z</published>
-    <updated>2021-03-03T02:24:13.233Z</updated>
+    <updated>2021-03-03T12:07:27.761Z</updated>
     
     
       
@@ -42,77 +128,6 @@
     <category term="无监督学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/"/>
     
     <category term="K-Means" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/K-Means/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习联系:房价预测</title>
-    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7096.html"/>
-    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7096.html</id>
-    <published>2021-03-03T01:37:39.000Z</published>
-    <updated>2021-03-03T01:42:05.555Z</updated>
-    
-    
-    
-    
-    <category term="人工智能基础" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="机器学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习之聚类—Kmeans实战</title>
-    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7095.html"/>
-    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7095.html</id>
-    <published>2021-03-03T01:37:39.000Z</published>
-    <updated>2021-03-03T03:30:33.940Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;一-任务&quot;&gt;&lt;a href=&quot;#一-任务&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="人工智能基础" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="机器学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="K-Means" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/K-Means/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习---逻辑回归:考试通过预测</title>
-    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7094.html"/>
-    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7094.html</id>
-    <published>2021-03-03T01:37:39.000Z</published>
-    <updated>2021-03-03T02:56:43.972Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;什么时候用逻辑回归&quot;&gt;&lt;a href=&quot;#什么时候用逻辑回归&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="人工智能基础" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/"/>
-    
-    
-    <category term="机器学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="逻辑回归" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/"/>
     
   </entry>
   
@@ -144,12 +159,20 @@
   </entry>
   
   <entry>
-    <title>机器学习联系:房价预测</title>
-    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7097.html"/>
-    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7097.html</id>
+    <title>机器学习---逻辑回归:考试通过预测</title>
+    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7094.html"/>
+    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7094.html</id>
     <published>2021-03-03T01:37:39.000Z</published>
-    <updated>2021-03-03T01:42:05.555Z</updated>
+    <updated>2021-03-03T02:56:43.972Z</updated>
     
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;什么时候用逻辑回归&quot;&gt;&lt;a href=&quot;#什么时候用逻辑回归&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
@@ -158,6 +181,66 @@
     
     <category term="机器学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
     
+    <category term="逻辑回归" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>机器学习之聚类—Kmeans实战</title>
+    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7095.html"/>
+    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7095.html</id>
+    <published>2021-03-03T01:37:39.000Z</published>
+    <updated>2021-03-03T03:30:33.940Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;一-任务&quot;&gt;&lt;a href=&quot;#一-任务&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="人工智能基础" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="机器学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="K-Means" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/K-Means/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深度学习之卷积神经网络</title>
+    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7097.html"/>
+    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/03/7097.html</id>
+    <published>2021-03-03T01:37:39.000Z</published>
+    <updated>2021-03-03T15:45:35.665Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;推荐阅读：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="人工智能基础" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="机器学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="深度学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="CNN" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/CNN/"/>
+    
   </entry>
   
   <entry>
@@ -165,7 +248,7 @@
     <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/01/18760.html"/>
     <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/03/01/18760.html</id>
     <published>2021-03-01T14:06:37.000Z</published>
-    <updated>2021-03-03T01:37:07.772Z</updated>
+    <updated>2021-03-03T16:09:47.880Z</updated>
     
     
       
@@ -180,38 +263,19 @@
     
     <category term="人工智能基础" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/"/>
     
+    <category term="工具" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/"/>
+    
     
     <category term="Anaconda" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/Anaconda/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/02/25/16107.html"/>
-    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/02/25/16107.html</id>
-    <published>2021-02-25T13:13:51.582Z</published>
-    <updated>2021-02-28T15:48:33.708Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Anaconda</title>
+    <title>Anaconda的介绍与使用</title>
     <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/01/04/41489.html"/>
     <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/01/04/41489.html</id>
     <published>2021-01-04T10:18:11.000Z</published>
-    <updated>2021-03-01T14:01:43.511Z</updated>
+    <updated>2021-03-03T16:09:56.784Z</updated>
     
     
       
@@ -224,7 +288,9 @@
     
     
     
-    <category term="人工智能学习" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AD%A6%E4%B9%A0/"/>
+    <category term="人工智能基础" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="工具" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="Anaconda" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/Anaconda/"/>
@@ -236,7 +302,7 @@
     <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2021/01/03/25359.html"/>
     <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2021/01/03/25359.html</id>
     <published>2021-01-03T00:42:01.000Z</published>
-    <updated>2021-03-03T01:33:55.856Z</updated>
+    <updated>2021-03-03T09:36:05.867Z</updated>
     
     
       
@@ -257,28 +323,11 @@
   </entry>
   
   <entry>
-    <title>大四个人总结</title>
-    <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2020/06/24/15280.html"/>
-    <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2020/06/24/15280.html</id>
-    <published>2020-06-24T00:15:12.000Z</published>
-    <updated>2021-03-02T00:28:57.505Z</updated>
-    
-    
-    
-    
-    <category term="花津南路" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E8%8A%B1%E6%B4%A5%E5%8D%97%E8%B7%AF/"/>
-    
-    
-    <category term="大学生活" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>数据库三范式</title>
     <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2020/03/02/15177.html"/>
     <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2020/03/02/15177.html</id>
     <published>2020-03-02T03:45:00.000Z</published>
-    <updated>2021-03-02T10:01:52.909Z</updated>
+    <updated>2021-03-03T09:37:20.357Z</updated>
     
     
       
@@ -304,7 +353,7 @@
     <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2020/01/03/62216.html"/>
     <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2020/01/03/62216.html</id>
     <published>2020-01-03T00:09:10.000Z</published>
-    <updated>2021-03-01T09:58:07.954Z</updated>
+    <updated>2021-03-03T16:11:30.972Z</updated>
     
     
       
@@ -317,10 +366,12 @@
     
     
     
-    <category term="工具" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E5%B7%A5%E5%85%B7/"/>
+    <category term="博客" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
     <category term="hexo" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/hexo/"/>
+    
+    <category term="工具" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -329,7 +380,7 @@
     <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2020/01/01/63100.html"/>
     <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2020/01/01/63100.html</id>
     <published>2020-01-01T03:19:08.000Z</published>
-    <updated>2021-03-02T07:31:16.604Z</updated>
+    <updated>2021-03-03T16:11:44.512Z</updated>
     
     
       
@@ -342,10 +393,12 @@
     
     
     
-    <category term="工具" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E5%B7%A5%E5%85%B7/"/>
+    <category term="博客" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/categories/%E5%8D%9A%E5%AE%A2/"/>
     
     
     <category term="hexo" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/hexo/"/>
+    
+    <category term="工具" scheme="https://github.com/JustinLibo/JustinLibo.github.io.git/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -354,7 +407,7 @@
     <link href="https://github.com/JustinLibo/JustinLibo.github.io.git/2019/07/09/2666.html"/>
     <id>https://github.com/JustinLibo/JustinLibo.github.io.git/2019/07/09/2666.html</id>
     <published>2019-07-09T00:15:00.000Z</published>
-    <updated>2021-03-02T00:26:09.149Z</updated>
+    <updated>2021-03-03T09:34:08.600Z</updated>
     
     
     

@@ -5,7 +5,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="机器学习联系:房价预测, HandsomeBo&#39;s Blog">
+    <meta name="keywords" content="深度学习之卷积神经网络, HandsomeBo&#39;s Blog">
     <meta name="description" content="热爱生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>机器学习联系:房价预测 | HandsomeBo&#39;s Blog</title>
+    <title>深度学习之卷积神经网络 | HandsomeBo&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/medias/ironman.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">机器学习联系:房价预测</h1>
+                    <h1 class="description center-align post-title">深度学习之卷积神经网络</h1>
                 </div>
             </div>
         </div>
@@ -450,6 +450,14 @@
                                 <span class="chip bg-color">机器学习</span>
                             </a>
                         
+                            <a href="/JustinLibo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">深度学习</span>
+                            </a>
+                        
+                            <a href="/JustinLibo.github.io/tags/CNN/">
+                                <span class="chip bg-color">CNN</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -480,14 +488,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    0
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -502,7 +510,54 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <p><strong>推荐阅读：</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.sohu.com/a/241338315_787107">https://www.sohu.com/a/241338315_787107</a></p>
+</blockquote>
+<p>文章把VGG16写的相当通俗易懂。</p>
+<h2 id="图像卷积运算"><a href="#图像卷积运算" class="headerlink" title="图像卷积运算"></a>图像卷积运算</h2><p>对图像矩阵与滤波器矩阵进行对应相乘再求和运算，转化得到新的矩阵。作用:快速定位图像中某些边缘特征<br>英文: convolution<br>CNN<br>A与B的卷积通常表示为:A*B或convolution(A,B)<br>···· X11 X12 X13<br>A= X21 X22 X23<br>···· X31 X32 X33<br>····<br>F= W11 W12<br>···· W21 W22</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124549978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124602212.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>包含竖向轮廓的区域非常亮(灰度值越大月亮）</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124614710.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>计算机根据样本图片，自动寻找合适的轮廓过滤器，对新图片进行轮廓匹配<br> 池化:按照一个固定规则对图像矩阵进行处理，将其转换为更低维度的矩阵<br> 最大法池化(Max-pooling)</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124632527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>Stride为窗口滑动步长，用于池化、卷积的计算中。<br> 保留核心信息的情况下，实现维度缩减<br> 把卷积、池化、mlp先后连接在一起，组成卷积神经网络。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124645139.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124658628.png" alt=" "></p>
+<p>作用:<br> 1、使部分神经元为0，防止过拟合<br> 2、助于模型的求解<br> Relu函数:f(x) = max(x, 0)</p>
+<p><img src="https://img-blog.csdnimg.cn/20210303232258347.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>转化成全连接层</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124808487.png" alt=" "></p>
+<h2 id="卷积神经网络两大特点："><a href="#卷积神经网络两大特点：" class="headerlink" title="卷积神经网络两大特点："></a>卷积神经网络两大特点：</h2><ol>
+<li>**参数共享(parameter sharing):**同一个特征过滤器可用于整张图片</li>
+<li>**稀疏连接(sparsity of connections):**生成的特征图片每个节点只与原图片中特定节点连接</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20210109124832181.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124838107.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124844112.png" alt=" "></p>
+<p>？×？=（n-f+1）×(n-f+1)<br> 卷积运算导致的两个问题:<br> 图像被压缩，造成信息丢失<br> 边缘信息使用少，容易被忽略<br> 图像填充(padding)<br> 通过在图像各边增加像素，使其在进行卷积运算后维持原图大小</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124921632.png" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124926456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>通过padding增加像素的数量，由过滤器尺寸与stride决定</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124938163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125005339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125013824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125022703.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<h2 id="经典的CNN模型"><a href="#经典的CNN模型" class="headerlink" title="经典的CNN模型"></a>经典的CNN模型</h2><p>1、参考经典的CNN结构搭建新模型<br> 2、使用经典的CNN模型结构对图像预处理，再建立MLP模型<br> 经典的CNN模型:</p>
+<h3 id="LeNet-5"><a href="#LeNet-5" class="headerlink" title="LeNet-5"></a><strong>LeNet-5</strong></h3><p><img src="https://img-blog.csdnimg.cn/20210109125059419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>（1）6个5×5的过滤器滑动窗口为1<br>（2）平均值池化：2×2的滑动窗口是2<br>（3）16个5×5的过滤器滑动窗口为1<br>（4）池化：2×2的滑动窗口是2<br>（5）展开<br>（6）进行MLP模型<br>（7）输出10个类别<br>输入图像:32 X 32灰度图，1个通道(channel)训练参数:约60,000个<br>特点:<br>1、随着网络越深，图像的高度和宽度在缩小，通道数在增加<br>2、卷积与池化先后成对使用</p>
+<h3 id="AlexNet"><a href="#AlexNet" class="headerlink" title="AlexNet"></a>AlexNet</h3><p><img src="https://img-blog.csdnimg.cn/20210109125118747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>（1）96个11×11的过滤器滑动窗口为4<br> （2）最大值池化：3×3的滑动窗口是2<br> （3）256个5×5的过滤器滑动窗口为1<br> （4）最大值池化：3×3的滑动窗口是2<br> …<br> （n）输出1000个类别<br>输入图像:227X 227X 3 RGB图，3个通道训练参数:约60,000,000个<br>特点:<br>1、适用于识别较为复杂的彩色图，可识别1000种类别<br>2、结构比LeNet更为复杂，使用Relu作为激活函数<br>学术界开始相信深度学习技术,<br>在计算机视觉应用中可以得到很不错的结果。</p>
+<h3 id="VGG"><a href="#VGG" class="headerlink" title="VGG"></a><strong>VGG</strong></h3><p><img src="https://img-blog.csdnimg.cn/20210109125202651.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125208140.png" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125213790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/2021010912522242.png" alt=" "></p>
+<p>所有的卷积都是64个3×3的过滤器移动窗口是1，最大值池化：2×2的滑动窗口是2<br>不断重复同样的步骤<br>输入图像: 227 X 227X 3 RGB图，3个通道训练参数:约138,000,000个<br>特点:<br>1、所有卷积层filter 宽和高都是3，步长为1,padding 都使用same convolution;<br>2、所有池化层的 filter 宽和高都是2，步长都是2;<br>3、相比alexnet，有更多的filter用于提取轮廓信息，具有更高精准性</p>
+<h2 id="经典的CNN模型用于新场景"><a href="#经典的CNN模型用于新场景" class="headerlink" title="经典的CNN模型用于新场景"></a>经典的CNN模型用于新场景</h2><p><strong>1、使用经典的CNN模型结构对图像预处理，再建立MLP模型;</strong><br>（1）加载经典的CNN模型，剥除其FC层，对图像进行预处理<br>（2）把预处理完成的数据作为输入，分类结果为输出，建立一个mlp模型<br>（3）模型训练<br><strong>2、参考经典的CNN结构搭建新模型</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125247163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125253460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+
                 
             </div>
             <hr/>
@@ -568,6 +623,14 @@
                             
                                 <a href="/JustinLibo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
                                     <span class="chip bg-color">机器学习</span>
+                                </a>
+                            
+                                <a href="/JustinLibo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">深度学习</span>
+                                </a>
+                            
+                                <a href="/JustinLibo.github.io/tags/CNN/">
+                                    <span class="chip bg-color">CNN</span>
                                 </a>
                             
                         </div>
@@ -743,12 +806,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/03/03/7099.html">
+                <a href="/JustinLibo.github.io/2021/03/03/7095.html">
                     <div class="card-image">
                         
-                        <img src="https://img-blog.csdnimg.cn/20201126125020130.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RmbHlfeng=,size_16,color_FFFFFF,t_70" class="responsive-img" alt="机器学习---线性回归:房价预测">
+                        <img src="https://blog.chasingwind.top/s0YpbF.png" class="responsive-img" alt="机器学习之聚类—Kmeans实战">
                         
-                        <span class="card-title">机器学习---线性回归:房价预测</span>
+                        <span class="card-title">机器学习之聚类—Kmeans实战</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -780,8 +843,8 @@
                         <span class="chip bg-color">机器学习</span>
                     </a>
                     
-                    <a href="/JustinLibo.github.io/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
-                        <span class="chip bg-color">线性回归</span>
+                    <a href="/JustinLibo.github.io/tags/K-Means/">
+                        <span class="chip bg-color">K-Means</span>
                     </a>
                     
                 </div>
@@ -820,6 +883,10 @@
                             
                             <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/" class="post-category">
                                     人工智能基础
+                                </a>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
                                 </a>
                             
                             
@@ -979,7 +1046,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.4k</span>&nbsp;字
+                class="white-color">14.7k</span>&nbsp;字
             
             
             
@@ -1201,9 +1268,9 @@ $(function () {
     
 
     
-    <script src="/JustinLibo.github.io/libs/instantpage/instantpage.js" type="module"></script>
+    <script src="/JustinLibo.github.io/libs/instantpage/instantpage.js" type="module"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
 
-<script src="/JustinLibo.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/JustinLibo.github.io/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":300},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+<script src="/JustinLibo.github.io/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginModelPath":"assets/","model":{"jsonPath":"/JustinLibo.github.io/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":200,"height":300},"mobile":{"show":false},"rect":"opacity:0.7","log":false,"pluginJsPath":"lib/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 
 </html>
