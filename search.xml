@@ -118,35 +118,6 @@
     
     
     <entry>
-      <title>机器学习：聚类</title>
-      <link href="/JustinLibo.github.io/2021/02/05/7098.html"/>
-      <url>/JustinLibo.github.io/2021/02/05/7098.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="一-无监督学习"><a href="#一-无监督学习" class="headerlink" title="一.无监督学习"></a>一.无监督学习</h2><h3 id="1-小例"><a href="#1-小例" class="headerlink" title="1.小例"></a>1.小例</h3><p>在说实战之前，我们先来简单说一说机器学习中的无监督学习。举个栗子~~<br> 下面是几张小狗的图片，如果我们让计算机自己把这些图片分成两类，计算机会怎么做呢？<br> <img src="https://img-blog.csdnimg.cn/20200510150523691.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br> <img src="https://img-blog.csdnimg.cn/20200510150614476.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><img src="https://img-blog.csdnimg.cn/20200510150710990.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br> <img src="https://img-blog.csdnimg.cn/2020051015073198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><img src="https://img-blog.csdnimg.cn/20200510150757730.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><img src="https://img-blog.csdnimg.cn/20200510150922899.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br> ps：图片均来源于网络，若有侵权请联系删除，谢谢！</p><p>因为没有明确的分类标准，所以计算机可能会按照不同的方式对这些图片进行分类，比如：</p><ol><li>小狗是站着还是坐着</li><li>小狗脖子处是否有饰品</li><li>小狗是否露出了舌头</li></ol><p>除此之外分类的方式还有很多，从中可以看出无监督学习的一些特点：</p><ol><li>没有对与错（分类方式不唯一）</li><li>寻找数据的共同点从而进行分类（无论采用哪种方式进行分类，同类图片都是有共同点的）</li></ol><p>通过这个简单的例子，下面就来看一看无监督学习的简单定义吧！</p><h3 id="2-简单定义"><a href="#2-简单定义" class="headerlink" title="2.简单定义"></a>2.简单定义</h3><p>无监督学习：机器学习的一种方法，没有给定事先标记过的训练示例，自动对输入的数据进行分类或分群。</p><h3 id="3-优点："><a href="#3-优点：" class="headerlink" title="3.优点："></a>3.优点：</h3><ol><li>算法不受监督信息（偏见）的约束，可能考虑到新的信息<br> 这也就是上例所说的可以按不同方式分类，并没有一个明确的规定</li><li>不需要标签数据，极大程度扩大数据样本<br> 无监督学习不需要标签数据，这样在面临成千上万个数据时可以让计算机自动去分类从而节省大量的人力成本。</li></ol><h3 id="4-主要应用："><a href="#4-主要应用：" class="headerlink" title="4.主要应用："></a>4.主要应用：</h3><p>聚类分析、关联分析、维度缩减等</p><p>这里简单来谈谈聚类分析(对其他应用感兴趣的小伙伴可以自己去找一下相关资料。)</p><h2 id="二-聚类分析"><a href="#二-聚类分析" class="headerlink" title="二.聚类分析"></a>二.聚类分析</h2><h3 id="1-简单定义："><a href="#1-简单定义：" class="headerlink" title="1.简单定义："></a>1.简单定义：</h3><p>聚类分析又称为群分析，是根据对象某些属性的相似度，将其自动划分为不同的类别。</p><h3 id="2-小例："><a href="#2-小例：" class="headerlink" title="2.小例："></a>2.小例：</h3><p>例如：</p><p><img src="https://img-blog.csdnimg.cn/20200510153602871.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p>一个公司可以根据自己客户几年来的数据把客户分成普通客户、vip客户、svip客户等等。这样就可以根据不同的客户类型进行不同的商业推广啦。</p><p>又比如新闻关联：<br><img src="https://img-blog.csdnimg.cn/20200510154026950.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br>给定一个关键词，可以把最近有关这个关键词的最新最热新闻推送出来。</p><h3 id="3-常用聚类算法："><a href="#3-常用聚类算法：" class="headerlink" title="3.常用聚类算法："></a>3.常用聚类算法：</h3><ol><li><strong>KMeans聚类</strong><br> 根据数据与中心点距离划分类别<br> 基于类别数据更新中心点<br> 重复过程直到收敛</li></ol><p><strong>特点：实现简单、收敛快；需要指定类别数量（需要告诉计算机要分成几类）</strong></p><ol start="2"><li><strong>均值漂移聚类(Meanshift)</strong><br> 在中心点一定区域检索数据点<br> 更新中心<br> 重复流程到中心点稳定</li></ol><p><strong>特点：自动发现类别数量，不需要人工选择；需要选择区域半径</strong></p><ol start="3"><li><strong>DBSCAN算法(基于密度的空间聚类算法)</strong><br> 基于区域点密度筛选有效数据<br> 基于有效数据向周边扩张，直到没有新点加入</li></ol><p><strong>特点：过滤噪音数据；不需要人为选择类别数量；数据密度不同时影响结果</strong></p><p>因为后面的实战是基于KMeans算法的，所以这里详细说一下KMeans算法，想更多了解其它算法的小伙伴可以去找找相关资料。</p><p><img src="https://img-blog.csdnimg.cn/20200510160437107.png" alt=" "></p><p><img src="https://img-blog.csdnimg.cn/20200510160517156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><img src="https://img-blog.csdnimg.cn/20200510160605929.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><img src="https://img-blog.csdnimg.cn/20200510160801685.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><img src="https://img-blog.csdnimg.cn/2020051016084795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p>这样可能不太好理解，下面我们来看一看它的执行流程。</p><p><img src="https://img-blog.csdnimg.cn/20200510161018662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><font color='red'> 假设这里把这些点分为两类，在这些点中随机选择两个聚类中心。</font></p><p><img src="https://img-blog.csdnimg.cn/20200510161056561.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><font color='red'> 计算每个点到聚类中心的距离，然后将这些点进行分类。 </font></p><p><font color='red'> text </font><img src="https://img-blog.csdnimg.cn/20200510161150831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><font color='red'> 更新聚类中心 </font></p><p><img src="https://img-blog.csdnimg.cn/20200510161302861.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><font color='red'> 重新计算每个点到聚类中心的距离并根据新的距离重新分类 </font></p><p><img src="https://img-blog.csdnimg.cn/20200510161413464.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><font color='red'> 直至中心不再变化为止。</font></p><p><img src="https://img-blog.csdnimg.cn/20200510161541800.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 人工智能基础 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 机器学习 </tag>
-            
-            <tag> 无监督学习 </tag>
-            
-            <tag> K-Means </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>机器学习之聚类—Kmeans实战</title>
       <link href="/JustinLibo.github.io/2021/02/05/7095.html"/>
       <url>/JustinLibo.github.io/2021/02/05/7095.html</url>
@@ -165,9 +136,38 @@
             
             <tag> 机器学习 </tag>
             
+            <tag> K-Means </tag>
+            
             <tag> 无监督学习 </tag>
             
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>机器学习：聚类</title>
+      <link href="/JustinLibo.github.io/2021/02/05/7098.html"/>
+      <url>/JustinLibo.github.io/2021/02/05/7098.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="一-无监督学习"><a href="#一-无监督学习" class="headerlink" title="一.无监督学习"></a>一.无监督学习</h2><h3 id="1-小例"><a href="#1-小例" class="headerlink" title="1.小例"></a>1.小例</h3><p>在说实战之前，我们先来简单说一说机器学习中的无监督学习。举个栗子~~<br> 下面是几张小狗的图片，如果我们让计算机自己把这些图片分成两类，计算机会怎么做呢？<br> <img src="https://img-blog.csdnimg.cn/20200510150523691.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br> <img src="https://img-blog.csdnimg.cn/20200510150614476.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><img src="https://img-blog.csdnimg.cn/20200510150710990.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br> <img src="https://img-blog.csdnimg.cn/2020051015073198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><img src="https://img-blog.csdnimg.cn/20200510150757730.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><img src="https://img-blog.csdnimg.cn/20200510150922899.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br> ps：图片均来源于网络，若有侵权请联系删除，谢谢！</p><p>因为没有明确的分类标准，所以计算机可能会按照不同的方式对这些图片进行分类，比如：</p><ol><li>小狗是站着还是坐着</li><li>小狗脖子处是否有饰品</li><li>小狗是否露出了舌头</li></ol><p>除此之外分类的方式还有很多，从中可以看出无监督学习的一些特点：</p><ol><li>没有对与错（分类方式不唯一）</li><li>寻找数据的共同点从而进行分类（无论采用哪种方式进行分类，同类图片都是有共同点的）</li></ol><p>通过这个简单的例子，下面就来看一看无监督学习的简单定义吧！</p><h3 id="2-简单定义"><a href="#2-简单定义" class="headerlink" title="2.简单定义"></a>2.简单定义</h3><p>无监督学习：机器学习的一种方法，没有给定事先标记过的训练示例，自动对输入的数据进行分类或分群。</p><h3 id="3-优点："><a href="#3-优点：" class="headerlink" title="3.优点："></a>3.优点：</h3><ol><li>算法不受监督信息（偏见）的约束，可能考虑到新的信息<br> 这也就是上例所说的可以按不同方式分类，并没有一个明确的规定</li><li>不需要标签数据，极大程度扩大数据样本<br> 无监督学习不需要标签数据，这样在面临成千上万个数据时可以让计算机自动去分类从而节省大量的人力成本。</li></ol><h3 id="4-主要应用："><a href="#4-主要应用：" class="headerlink" title="4.主要应用："></a>4.主要应用：</h3><p>聚类分析、关联分析、维度缩减等</p><p>这里简单来谈谈聚类分析(对其他应用感兴趣的小伙伴可以自己去找一下相关资料。)</p><h2 id="二-聚类分析"><a href="#二-聚类分析" class="headerlink" title="二.聚类分析"></a>二.聚类分析</h2><h3 id="1-简单定义："><a href="#1-简单定义：" class="headerlink" title="1.简单定义："></a>1.简单定义：</h3><p>聚类分析又称为群分析，是根据对象某些属性的相似度，将其自动划分为不同的类别。</p><h3 id="2-小例："><a href="#2-小例：" class="headerlink" title="2.小例："></a>2.小例：</h3><p>例如：</p><p><img src="https://img-blog.csdnimg.cn/20200510153602871.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p>一个公司可以根据自己客户几年来的数据把客户分成普通客户、vip客户、svip客户等等。这样就可以根据不同的客户类型进行不同的商业推广啦。</p><p>又比如新闻关联：<br><img src="https://img-blog.csdnimg.cn/20200510154026950.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br>给定一个关键词，可以把最近有关这个关键词的最新最热新闻推送出来。</p><h3 id="3-常用聚类算法："><a href="#3-常用聚类算法：" class="headerlink" title="3.常用聚类算法："></a>3.常用聚类算法：</h3><ol><li><strong>KMeans聚类</strong><br> 根据数据与中心点距离划分类别<br> 基于类别数据更新中心点<br> 重复过程直到收敛</li></ol><p><strong>特点：实现简单、收敛快；需要指定类别数量（需要告诉计算机要分成几类）</strong></p><ol start="2"><li><strong>均值漂移聚类(Meanshift)</strong><br> 在中心点一定区域检索数据点<br> 更新中心<br> 重复流程到中心点稳定</li></ol><p><strong>特点：自动发现类别数量，不需要人工选择；需要选择区域半径</strong></p><ol start="3"><li><strong>DBSCAN算法(基于密度的空间聚类算法)</strong><br> 基于区域点密度筛选有效数据<br> 基于有效数据向周边扩张，直到没有新点加入</li></ol><p><strong>特点：过滤噪音数据；不需要人为选择类别数量；数据密度不同时影响结果</strong></p><p>因为后面的实战是基于KMeans算法的，所以这里详细说一下KMeans算法，想更多了解其它算法的小伙伴可以去找找相关资料。</p><p><img src="https://img-blog.csdnimg.cn/20200510160437107.png" alt=" "></p><p><img src="https://img-blog.csdnimg.cn/20200510160517156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><img src="https://img-blog.csdnimg.cn/20200510160605929.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><img src="https://img-blog.csdnimg.cn/20200510160801685.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><img src="https://img-blog.csdnimg.cn/2020051016084795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p>这样可能不太好理解，下面我们来看一看它的执行流程。</p><p><img src="https://img-blog.csdnimg.cn/20200510161018662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><font color='red'> 假设这里把这些点分为两类，在这些点中随机选择两个聚类中心。</font></p><p><img src="https://img-blog.csdnimg.cn/20200510161056561.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><font color='red'> 计算每个点到聚类中心的距离，然后将这些点进行分类。 </font></p><p><font color='red'> text </font><img src="https://img-blog.csdnimg.cn/20200510161150831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><font color='red'> 更新聚类中心 </font></p><p><img src="https://img-blog.csdnimg.cn/20200510161302861.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><font color='red'> 重新计算每个点到聚类中心的距离并根据新的距离重新分类 </font></p><p><img src="https://img-blog.csdnimg.cn/20200510161413464.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p><p><font color='red'> 直至中心不再变化为止。</font></p><p><img src="https://img-blog.csdnimg.cn/20200510161541800.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 人工智能基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机器学习 </tag>
+            
             <tag> K-Means </tag>
+            
+            <tag> 无监督学习 </tag>
             
         </tags>
       
