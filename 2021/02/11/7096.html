@@ -5,7 +5,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="深度学习之卷积神经网络, HandsomeBo&#39;s Blog">
+    <meta name="keywords" content="MLP实现图像多分类, HandsomeBo&#39;s Blog">
     <meta name="description" content="热爱生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>深度学习之卷积神经网络 | HandsomeBo&#39;s Blog</title>
+    <title>MLP实现图像多分类 | HandsomeBo&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/medias/ironman.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">深度学习之卷积神经网络</h1>
+                    <h1 class="description center-align post-title">MLP实现图像多分类</h1>
                 </div>
             </div>
         </div>
@@ -454,8 +454,8 @@
                                 <span class="chip bg-color">深度学习</span>
                             </a>
                         
-                            <a href="/JustinLibo.github.io/tags/CNN/">
-                                <span class="chip bg-color">CNN</span>
+                            <a href="/JustinLibo.github.io/tags/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/">
+                                <span class="chip bg-color">多层感知机</span>
                             </a>
                         
                     </div>
@@ -479,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-03
+                    2021-02-11
                 </div>
                 
 
@@ -488,14 +488,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -510,53 +510,127 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>推荐阅读：</strong></p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://www.sohu.com/a/241338315_787107">https://www.sohu.com/a/241338315_787107</a></p>
-</blockquote>
-<p>文章把VGG16写的相当通俗易懂。</p>
-<h2 id="图像卷积运算"><a href="#图像卷积运算" class="headerlink" title="图像卷积运算"></a>图像卷积运算</h2><p>对图像矩阵与滤波器矩阵进行对应相乘再求和运算，转化得到新的矩阵。作用:快速定位图像中某些边缘特征<br>英文: convolution<br>CNN<br>A与B的卷积通常表示为:A*B或convolution(A,B)<br>···· X11 X12 X13<br>A= X21 X22 X23<br>···· X31 X32 X33<br>····<br>F= W11 W12<br>···· W21 W22</p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124549978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124602212.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>包含竖向轮廓的区域非常亮(灰度值越大月亮）</p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124614710.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>计算机根据样本图片，自动寻找合适的轮廓过滤器，对新图片进行轮廓匹配<br> 池化:按照一个固定规则对图像矩阵进行处理，将其转换为更低维度的矩阵<br> 最大法池化(Max-pooling)</p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124632527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>Stride为窗口滑动步长，用于池化、卷积的计算中。<br> 保留核心信息的情况下，实现维度缩减<br> 把卷积、池化、mlp先后连接在一起，组成卷积神经网络。</p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124645139.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124658628.png" alt=" "></p>
-<p>作用:<br> 1、使部分神经元为0，防止过拟合<br> 2、助于模型的求解<br> Relu函数:f(x) = max(x, 0)</p>
-<p><img src="https://img-blog.csdnimg.cn/20210303232258347.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>转化成全连接层</p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124808487.png" alt=" "></p>
-<h2 id="卷积神经网络两大特点："><a href="#卷积神经网络两大特点：" class="headerlink" title="卷积神经网络两大特点："></a>卷积神经网络两大特点：</h2><ol>
-<li>**参数共享(parameter sharing):**同一个特征过滤器可用于整张图片</li>
-<li>**稀疏连接(sparsity of connections):**生成的特征图片每个节点只与原图片中特定节点连接</li>
+                <h1 id="多层感知器（MLP）"><a href="#多层感知器（MLP）" class="headerlink" title="多层感知器（MLP）"></a>多层感知器（MLP）</h1><h2 id="问题引入："><a href="#问题引入：" class="headerlink" title="问题引入："></a><strong>问题引入：</strong></h2><p>（1）根据检测数据x1、x2及其标签，判断x1=0.7、x2=0.6时所属类别</p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105109444.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>如果采用逻辑回归，因为边界函数并不是单一的直线或圆之类的函数，所以这个逻辑回归边界函数不很好找到，如果初始数据属性有100项甚至更多项，那么形成的多项式数据量会非常庞大。<br> （2）根据各个国家100项指标，判断其未来5年的发展潜力</p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105132394.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>这样的数据有多个指标，那么其二次多项式个数就会更加多。</p>
+<p>(3）自动识别图片中的动物是猫还是狗。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105153710.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>计算机对于图片看到的是一个二维数组的数值，其中有图像RGB值，灰度值，像素值三种。具体关系见链接<a target="_blank" rel="noopener" href="http://www.360doc.com/content/18/0410/09/7551_744364416.shtml">图像RGB值灰度值像素值三者关系</a></p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105240531.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>上图就为计算机所看到的图片值<br> 计算机的解决办法：<br> 随机选取固定的两个点P1,P2，基于其灰度值进行分类预测。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105321155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>红色点是小猫，蓝色点是小狗，由此可以进行逻辑回归进行分类。<br> 对于输入的数据矩阵如下</p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105334920.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105341151.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>可以看出，输入的数据量非常巨大，再加上模型的二次项，就超过了百亿，非常耗时耗空间<br> 由此产生多层感知器（Multi-Layer Percepron）</p>
+<h2 id="多层感知器的介绍"><a href="#多层感知器的介绍" class="headerlink" title="多层感知器的介绍"></a>多层感知器的介绍</h2><p>多层感知机（MLP，Multilayer Perceptron）也叫人工神经网络（ANN，Artificial Neural Network），之所以叫做人工神经网络，原因如下：<br> 可以尝试建立一个模型，其结构模仿人的思考机制</p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105523455.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>上图为神经元结构，按照此结构进行简化成为我们想要的模型结构</p>
+<p><img src="https://img-blog.csdnimg.cn/202101081055512.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105557514.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>上图为逻辑回归模型的框架，由此可以看出两种模型的框架结构非常像。<br> 根据这种模型框架我们做出了如下的多层感知器模型框架</p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105609476.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>其中a1 a2 …an等等隐含神经元都是通过输入神经元x1 x2 …xn直接的关系得出的，以此同样的方法影响后面的隐含神经元，最后再影响输出神经元。<br>y=g(z)=1/(1+exp(-z))<br>a21=g(θ110 x0+θ111 x1+θ112 x2+…)<br>a22=g(θ210 x0+θ211 x1+θ212 x2+…)<br>…<br><img src="https://img-blog.csdnimg.cn/20210108105656989.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><strong>隐藏层：</strong><br>多层感知机在单层神经网络的基础上引入了一到多个**隐藏层(hidden layer)**。</p>
+<p>隐藏层位于输入层和输出层之间。上图展示了一个多层感知机的神经网络，它含有一个隐藏层，该层中有5个隐藏单元。<br>输入和输出个数为别为4和3，中间隐藏层中包含了5个隐藏单元。由于输入层不涉及计算，多层感知机的层数为2。隐藏层中的神经元和输入层各输入完全连接，输出层中的神经元和隐藏层中的各神经元也完全连接。因此多层感知机中的隐藏层和输出层都是<strong>全连接</strong>。<br><strong>激活函数：</strong><br>使用隐藏变量使用按照元素运算的非线性函数进行变换，然后作为一个全连接层的输入。这个非线性函数进行转换叫作<strong>激活函数(activation function)</strong><br>这里只介绍一下sigmoid函数<br>sigmoid函数可以将元素的值转变到0和1之间<br><strong>sigmoid(x)=g(x)=1/(1+exp(-x))</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105751174.png" alt=" "></p>
+<h2 id="MLP用于非线性分类预测"><a href="#MLP用于非线性分类预测" class="headerlink" title="MLP用于非线性分类预测"></a>MLP用于非线性分类预测</h2><p>要求：在不增加高次项数据的情况下，如何通过MLP实现非线性分类预测</p>
+<p><img src="https://img-blog.csdnimg.cn/2021010810583199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105841816.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>通过这三个逻辑回归模型组合在一起形成多层感知器</p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105852847.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><strong>多分类：</strong><br> 将数据分为两种以上的类别<br> 将下列图片分成小猫、小狗和小马三类</p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105914807.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210108105923155.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>最后的结果1 0 0就代表是小猫，0 1 0就代表的是小狗 ，0 0 1就代表的是小马。</p>
+<h2 id="Keras介绍"><a href="#Keras介绍" class="headerlink" title="Keras介绍"></a>Keras介绍</h2><p>Keras是一个用Python编写的用于神经网络开发的应用接口，调用开接口可以实现神经网络、卷积神经网络、循环神经网络等常用深度学习算法的开发<br>特点:<br>集成了深度学习中各类成熟的算法，容易安装和使用，样例丰富，教程和文档也非常详细；<br>能够以TensorFlow,或者Theano作为后端运行。<br>Keras or Tensorflow<br>Tensorflow是一个采用数据流图，用于数值计算的开源软件库，可自动计算模型相关的微分导数:非常适合用于神经网络模型的求解。<br>Keras可看作为tensorflow封装后的一个接口(Keras作为前端，TensorFlow作为后端。<br>Keras为用户提供了一个易于交互的外壳)方便进行深度学习的快速开发。</p>
+<h2 id="实战部分"><a href="#实战部分" class="headerlink" title="实战部分"></a>实战部分</h2><p>基于mnist数据集，建立mlp模型，实现0-9数字的十分类：</p>
+<ol>
+<li><p>实现mnist数据载入，可视化图形数字</p>
+</li>
+<li><p>完成数据预处理：图像数据维度转换与归一化、输出结果格式转换</p>
+</li>
+<li><p>计算模型在预测数据集的准确率</p>
+</li>
+<li><p>模型结构：两层隐藏层，每层有392个神经元</p>
+</li>
 </ol>
-<p><img src="https://img-blog.csdnimg.cn/20210109124832181.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124838107.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124844112.png" alt=" "></p>
-<p>？×？=（n-f+1）×(n-f+1)<br> 卷积运算导致的两个问题:<br> 图像被压缩，造成信息丢失<br> 边缘信息使用少，容易被忽略<br> 图像填充(padding)<br> 通过在图像各边增加像素，使其在进行卷积运算后维持原图大小</p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124921632.png" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124926456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>通过padding增加像素的数量，由过滤器尺寸与stride决定</p>
-<p><img src="https://img-blog.csdnimg.cn/20210109124938163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109125005339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109125013824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109125022703.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<h2 id="经典的CNN模型"><a href="#经典的CNN模型" class="headerlink" title="经典的CNN模型"></a>经典的CNN模型</h2><p>1、参考经典的CNN结构搭建新模型<br> 2、使用经典的CNN模型结构对图像预处理，再建立MLP模型<br> 经典的CNN模型:</p>
-<h3 id="LeNet-5"><a href="#LeNet-5" class="headerlink" title="LeNet-5"></a><strong>LeNet-5</strong></h3><p><img src="https://img-blog.csdnimg.cn/20210109125059419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>（1）6个5×5的过滤器滑动窗口为1<br>（2）平均值池化：2×2的滑动窗口是2<br>（3）16个5×5的过滤器滑动窗口为1<br>（4）池化：2×2的滑动窗口是2<br>（5）展开<br>（6）进行MLP模型<br>（7）输出10个类别<br>输入图像:32 X 32灰度图，1个通道(channel)训练参数:约60,000个<br>特点:<br>1、随着网络越深，图像的高度和宽度在缩小，通道数在增加<br>2、卷积与池化先后成对使用</p>
-<h3 id="AlexNet"><a href="#AlexNet" class="headerlink" title="AlexNet"></a>AlexNet</h3><p><img src="https://img-blog.csdnimg.cn/20210109125118747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>（1）96个11×11的过滤器滑动窗口为4<br> （2）最大值池化：3×3的滑动窗口是2<br> （3）256个5×5的过滤器滑动窗口为1<br> （4）最大值池化：3×3的滑动窗口是2<br> …<br> （n）输出1000个类别<br>输入图像:227X 227X 3 RGB图，3个通道训练参数:约60,000,000个<br>特点:<br>1、适用于识别较为复杂的彩色图，可识别1000种类别<br>2、结构比LeNet更为复杂，使用Relu作为激活函数<br>学术界开始相信深度学习技术,<br>在计算机视觉应用中可以得到很不错的结果。</p>
-<h3 id="VGG"><a href="#VGG" class="headerlink" title="VGG"></a><strong>VGG</strong></h3><p><img src="https://img-blog.csdnimg.cn/20210109125202651.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109125208140.png" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109125213790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/2021010912522242.png" alt=" "></p>
-<p>所有的卷积都是64个3×3的过滤器移动窗口是1，最大值池化：2×2的滑动窗口是2<br>不断重复同样的步骤<br>输入图像: 227 X 227X 3 RGB图，3个通道训练参数:约138,000,000个<br>特点:<br>1、所有卷积层filter 宽和高都是3，步长为1,padding 都使用same convolution;<br>2、所有池化层的 filter 宽和高都是2，步长都是2;<br>3、相比alexnet，有更多的filter用于提取轮廓信息，具有更高精准性</p>
-<h2 id="经典的CNN模型用于新场景"><a href="#经典的CNN模型用于新场景" class="headerlink" title="经典的CNN模型用于新场景"></a>经典的CNN模型用于新场景</h2><p><strong>1、使用经典的CNN模型结构对图像预处理，再建立MLP模型;</strong><br>（1）加载经典的CNN模型，剥除其FC层，对图像进行预处理<br>（2）把预处理完成的数据作为输入，分类结果为输出，建立一个mlp模型<br>（3）模型训练<br><strong>2、参考经典的CNN结构搭建新模型</strong></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109125247163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20210109125253460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>首先显示一张3*3的图片</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#load the mnist data </span>
+<span class="token keyword">from</span> keras<span class="token punctuation">.</span>datasets <span class="token keyword">import</span> mnist
+<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span>y_train<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span>X_test<span class="token punctuation">,</span>y_test<span class="token punctuation">)</span><span class="token operator">=</span>mnist<span class="token punctuation">.</span>load_data<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#visualize the data</span>
+img1<span class="token operator">=</span>X_train<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> pyplot <span class="token keyword">as</span> plt 
+fig1<span class="token operator">=</span>plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>img1<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span>y_train<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210108110420552.png" alt=" "></p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#format the input data  将28列28行转化为784组数据</span>
+feature_size<span class="token operator">=</span>img1<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">*</span>img1<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+X_train_format <span class="token operator">=</span> X_train<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>X_train<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>feature_size<span class="token punctuation">)</span>
+X_test_format <span class="token operator">=</span> X_test<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>X_test<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>feature_size<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>X_train_format<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>  
+</code></pre>
+<p> 60000个样本，每个样本784列数据</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#normalize the input data  归一化，将原本用于描述像素点的rgb值转化为0到1的值</span>
+X_train_normal <span class="token operator">=</span> X_train_format<span class="token operator">/</span><span class="token number">255</span>
+X_test_normal <span class="token operator">=</span> X_test_format<span class="token operator">/</span><span class="token number">255</span>
+
+<span class="token comment" spellcheck="true">#format the output data(labels)</span>
+<span class="token keyword">from</span> keras<span class="token punctuation">.</span>utils <span class="token keyword">import</span> to_categorical 
+y_train_format <span class="token operator">=</span> to_categorical<span class="token punctuation">(</span>y_train<span class="token punctuation">)</span>
+y_test_format <span class="token operator">=</span> to_categorical<span class="token punctuation">(</span>y_test<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>y_train_format<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#原本是5，现在是第5个元素为1,索引从0开始</span>
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210303171248693.png" alt=" "></p>
+<p>原本维度为784，因为隐藏层为俩层所以每层设置392个单元</p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#set up the model</span>
+<span class="token keyword">from</span> keras<span class="token punctuation">.</span>models <span class="token keyword">import</span> Sequential
+<span class="token keyword">from</span> keras<span class="token punctuation">.</span>layers <span class="token keyword">import</span> Dense<span class="token punctuation">,</span>Activation
+mlp<span class="token operator">=</span>Sequential<span class="token punctuation">(</span><span class="token punctuation">)</span>
+mlp<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span>units<span class="token operator">=</span><span class="token number">392</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'sigmoid'</span><span class="token punctuation">,</span>input_dim<span class="token operator">=</span>feature_size<span class="token punctuation">)</span><span class="token punctuation">)</span>
+mlp<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span>units<span class="token operator">=</span><span class="token number">392</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'sigmoid'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+mlp<span class="token punctuation">.</span>add<span class="token punctuation">(</span>Dense<span class="token punctuation">(</span>units<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span>activation<span class="token operator">=</span><span class="token string">'softmax'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+mlp<span class="token punctuation">.</span>summary<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210303171310367.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70" alt=" "></p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#configure the model </span>
+mlp<span class="token punctuation">.</span>compile<span class="token punctuation">(</span>loss<span class="token operator">=</span><span class="token string">'categorical_crossentropy'</span><span class="token punctuation">,</span>optimizer<span class="token operator">=</span><span class="token string">'adam'</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">#categorical_crossentropy多分类函数</span>
+<span class="token comment" spellcheck="true">#train the model </span>
+mlp<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train_normal<span class="token punctuation">,</span>y_train_format<span class="token punctuation">,</span>epochs<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#训练10次</span>
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210303171323213.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70" alt=" "></p>
+<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#评估模型</span>
+y_train_predict<span class="token operator">=</span>mlp<span class="token punctuation">.</span>predict_classes<span class="token punctuation">(</span>X_train_normal<span class="token punctuation">)</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> accuracy_score
+accuracy_train<span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_train<span class="token punctuation">,</span>y_train_predict<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>accuracy_train<span class="token punctuation">)</span>
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210303171348235.png" alt=" "></p>
+<p>训练的准确率非常高</p>
+<pre class=" language-python"><code class="language-python">y_test_predict<span class="token operator">=</span>mlp<span class="token punctuation">.</span>predict_classes<span class="token punctuation">(</span>X_test_normal<span class="token punctuation">)</span>
+accuracy_test<span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y_test<span class="token punctuation">,</span>y_test_predict<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>accuracy_test<span class="token punctuation">)</span>
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210303171401692.png" alt=" "></p>
+<p>测试的准确率也非常高<br> 接下来对数据进行随机展示，这里随机选择了第9001个</p>
+<pre class=" language-python"><code class="language-python">img2 <span class="token operator">=</span> X_test<span class="token punctuation">[</span><span class="token number">9000</span><span class="token punctuation">]</span>
+fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#imshow画矩阵</span>
+plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>img2<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span>y_test_prdict<span class="token punctuation">[</span><span class="token number">9000</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20210303171409505.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>预测成功！！！</p>
 
                 
             </div>
@@ -583,7 +657,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/03/7097.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/03/7097.html</a>
+                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/11/7096.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/11/7096.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -629,8 +703,8 @@
                                     <span class="chip bg-color">深度学习</span>
                                 </a>
                             
-                                <a href="/JustinLibo.github.io/tags/CNN/">
-                                    <span class="chip bg-color">CNN</span>
+                                <a href="/JustinLibo.github.io/tags/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/">
+                                    <span class="chip bg-color">多层感知机</span>
                                 </a>
                             
                         </div>
@@ -806,7 +880,64 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/03/03/7094.html">
+                <a href="/JustinLibo.github.io/2021/02/15/7097.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/JustinLibo.github.io/medias/featureimages/8.jpg" class="responsive-img" alt="深度学习之卷积神经网络">
+                        
+                        <span class="card-title">深度学习之卷积神经网络</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    人工智能基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/JustinLibo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/JustinLibo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
+                    </a>
+                    
+                    <a href="/JustinLibo.github.io/tags/CNN/">
+                        <span class="chip bg-color">CNN</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/JustinLibo.github.io/2021/02/08/7094.html">
                     <div class="card-image">
                         
                         
@@ -822,9 +953,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -846,59 +977,6 @@
                     
                     <a href="/JustinLibo.github.io/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">
                         <span class="chip bg-color">逻辑回归</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/JustinLibo.github.io/2021/03/01/18760.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/JustinLibo.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="JupyterNotebook的优化与配置">
-                        
-                        <span class="card-title">JupyterNotebook的优化与配置</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    人工智能基础
-                                </a>
-                            
-                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/JustinLibo.github.io/tags/Anaconda/">
-                        <span class="chip bg-color">Anaconda</span>
                     </a>
                     
                 </div>
@@ -1047,7 +1125,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14.7k</span>&nbsp;字
+                class="white-color">16.4k</span>&nbsp;字
             
             
             

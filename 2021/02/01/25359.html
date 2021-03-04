@@ -5,7 +5,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="机器学习---线性回归:房价预测, HandsomeBo&#39;s Blog">
+    <meta name="keywords" content="人工智能与机器学习概念、应用、实现方法, HandsomeBo&#39;s Blog">
     <meta name="description" content="热爱生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>机器学习---线性回归:房价预测 | HandsomeBo&#39;s Blog</title>
+    <title>人工智能与机器学习概念、应用、实现方法 | HandsomeBo&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/medias/ironman.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://img-blog.csdnimg.cn/20201126125020130.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RmbHlfeng=,size_16,color_FFFFFF,t_70')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://blog.chasingwind.top/default_21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">机器学习---线性回归:房价预测</h1>
+                    <h1 class="description center-align post-title">人工智能与机器学习概念、应用、实现方法</h1>
                 </div>
             </div>
         </div>
@@ -450,10 +450,6 @@
                                 <span class="chip bg-color">机器学习</span>
                             </a>
                         
-                            <a href="/JustinLibo.github.io/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
-                                <span class="chip bg-color">线性回归</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -475,7 +471,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-03
+                    2021-02-01
                 </div>
                 
 
@@ -484,14 +480,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -506,89 +502,71 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="机器学习简介"><a href="#机器学习简介" class="headerlink" title="机器学习简介"></a>机器学习简介</h2><h3 id="小例"><a href="#小例" class="headerlink" title="小例"></a>小例</h3><p>先来简单举个例子吧！假如一家公司1月的利润为50万，然后每月增长5%，问其9月利润是多少。按照传统算法，我们知道了该公司1月的利润，知道了月增长率，就可以根据公式计算出相应的结果，而机器学习与传统算法不同的是机器学习是把月份、利润这些数据给到计算机，然后由计算机自动去求解一个函数关系进而求得结果。</p>
-<p>传统算法：<br>1月利润+公式→计算机→结果</p>
-<p>机器学习：<br>前几个月的月份+每月对应的利润→计算机→F（x）（计算机求得的函数关系）→结果</p>
-<h3 id="简单定义"><a href="#简单定义" class="headerlink" title="简单定义"></a>简单定义</h3><p>然后来看看机器学习的一个简单定义吧~</p>
-<p>机器学习是一种实现人工智能的方法<br>从数据中寻找规律、建立关系，然后根据建立的关系去解决问题<br>从数据中学习从而实现自我优化与升级</p>
-<h3 id="机器学习的类别"><a href="#机器学习的类别" class="headerlink" title="机器学习的类别"></a>机器学习的类别</h3><p><strong>1.监督学习：</strong>在已有的数据集中，训练数据包括正确结果，知道输入数据与输出结果的关系，并可以根据这种关系建立一个关系模型，在获得新数据后，就可以根据这种关系输出对应结果。</p>
-<p><strong>2.无监督学习：</strong>训练数据不包括正确结果，让计算机自己去数据中寻找规律。</p>
-<p><strong>3.半监督学习：</strong>训练数据包含少量结果，可以理解为介于监督学习和无监督学习之间。</p>
-<p><strong>4.强化学习：</strong>根据每次结果收获的奖惩进行学习，实现优化。就比如让机器人去做一件事，做得好就加5分，做的差就减5分，然后按照第一种方式做事获得的分比第二种方式高，那么机器人就知道第一种方式更好了。按照这种奖惩方式，程序就可以逐步寻找获得高分的方法了。</p>
-<h2 id="房屋预测问题实战"><a href="#房屋预测问题实战" class="headerlink" title="房屋预测问题实战"></a>房屋预测问题实战</h2><p>基于usa_housing_price.csv数据，以人均收入、房屋年龄、房间数量、区域人口、房屋面积作为输入变量，来预测房屋价格。</p>
-<p>好了话不多说，上代码！</p>
-<p>这里的csv文件是提前下载好的</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#加载数据</span>
-<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'usa_housing_price.csv'</span><span class="token punctuation">)</span>
-data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#预览数据。数据很多，预览数据只是预览前五项。</span>
-</code></pre>
-<p>预览结果：<br> <img src="https://img-blog.csdnimg.cn/20200426202010478.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br> 再来看一下5个输入变量对应的散点图</p>
-<pre class=" language-python"><code class="language-python"><span class="token operator">%</span>matplotlib inline
-<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> pyplot <span class="token keyword">as</span> plt <span class="token comment" spellcheck="true">#导入相关库</span>
-fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">,</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#这里是定义画布大小</span>
-fig1 <span class="token operator">=</span>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">231</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#231是指两行三列的第一个图，下面的232是指两行三列的第二个图，依次类推</span>
-plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Avg. Area Income'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Price'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#获取数据，画出一个散点图</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Price VS Income'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#散点图的名称</span>
-
-fig2 <span class="token operator">=</span>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">232</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Avg. Area House Age'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Price'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Price VS House Age'</span><span class="token punctuation">)</span>
-
-fig3 <span class="token operator">=</span>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">233</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Avg. Area Number of Rooms'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Price'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Price VS Number of Rooms'</span><span class="token punctuation">)</span>
-
-fig4 <span class="token operator">=</span>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">234</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Area Population'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Price'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Price VS Area Population'</span><span class="token punctuation">)</span>
-
-fig5 <span class="token operator">=</span>plt<span class="token punctuation">.</span>subplot<span class="token punctuation">(</span><span class="token number">235</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'size'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Price'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Price VS size'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#展示散点图</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200426203828505.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>注意左上角的1e6是代表10的6次方，即2.5所代表值是2500000。</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#定义输入变量X_multi</span>
-X_multi <span class="token operator">=</span> data<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Price'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#去掉price所在列，因为有5个输入变量，输出结果只有1个，所以去掉price</span>
-y <span class="token operator">=</span> data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Price'</span><span class="token punctuation">]</span>
-X_multi 
-</code></pre>
-<p>预览<br> <img src="https://img-blog.csdnimg.cn/20200426205103762.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"><br> 可以看到这些数据是5000行5列的</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>linear_model <span class="token keyword">import</span> LinearRegression <span class="token comment" spellcheck="true">#导入相关库 </span>
-LR_multi <span class="token operator">=</span> LinearRegression<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#建立模型</span>
-LR_multi<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_multi<span class="token punctuation">,</span>y<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#训练模型</span>
-</code></pre>
-<p>这里模型已经训练好了：<br> <img src="https://img-blog.csdnimg.cn/20200426211009693.png#pic_center" alt="在这里插入图片描述"></p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#模型预测</span>
-y_predict_multi <span class="token operator">=</span> LR_multi<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_multi<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>y_predict_multi<span class="token punctuation">)</span>
-</code></pre>
-<p>预测结果：<img src="https://img-blog.csdnimg.cn/20200426211222733.png#pic_center" alt="在这里插入图片描述"></p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#模型评估</span>
-<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> mean_squared_error<span class="token punctuation">,</span>r2_score
-mean_squared_error_multi <span class="token operator">=</span> mean_squared_error<span class="token punctuation">(</span>y<span class="token punctuation">,</span>y_predict_multi<span class="token punctuation">)</span>
-r2_score_multi <span class="token operator">=</span> r2_score<span class="token punctuation">(</span>y<span class="token punctuation">,</span>y_predict_multi<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>mean_squared_error_multi<span class="token punctuation">,</span>r2_score_multi<span class="token punctuation">)</span>
-</code></pre>
-<p>评估结果：<br> <img src="https://img-blog.csdnimg.cn/20200426211346526.png#pic_center" alt="在这里插入图片描述"><br> r2越接近1越好，这里达到0.91，模型还算不错</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#图形评估</span>
-fig6 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span>figsize<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">9</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>y<span class="token punctuation">,</span>y_predict_multi<span class="token punctuation">)</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200426211550875.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>这里y值和y的预测值接近一条45度的直线，可以看出差别不大</p>
-<pre class=" language-python"><code class="language-python">X_test <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">66000</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">20000</span><span class="token punctuation">,</span><span class="token number">150</span><span class="token punctuation">]</span>
-X_test <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span><span class="token punctuation">.</span>reshape<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#将输入数据转化为数组</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
-</code></pre>
-<pre class=" language-python"><code class="language-python">y_test_predict <span class="token operator">=</span> LR_multi<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>y_test_predict<span class="token punctuation">)</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200426211834375.png" alt="在这里插入图片描述"></p>
-<p>自己输入一组数据，可以看到预测结果为114万多一点</p>
+                <h1 id="人工智能概念、应用、实现方法"><a href="#人工智能概念、应用、实现方法" class="headerlink" title="人工智能概念、应用、实现方法"></a>人工智能概念、应用、实现方法</h1><h2 id="生活案例出发：身边的人工智能"><a href="#生活案例出发：身边的人工智能" class="headerlink" title="生活案例出发：身边的人工智能"></a><strong>生活案例出发：身边的人工智能</strong></h2><ol>
+<li>人脸识别、自动驾驶、医疗图片诊断</li>
+<li>智能机器人、AlphaGo</li>
+<li>多语言翻译、智能客服、情感分类 </li>
+</ol>
+<p>​        </p>
+<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p><strong>人工智能—维基百科定义</strong></p>
+<p><strong>人工智能</strong>，亦称<strong>智机器智能</strong>，指由人制造出来的机器所表现出来的智能。</p>
+<p><strong>人工智能</strong>的核心问题包括建构能够跟人类似甚至超卓的推理、知识、规划、学习、交流、感知、移物、使用工具和操控机械的能力等</p>
+<p>人工智能—核心关键词</p>
+<p><img src="https://img-blog.csdnimg.cn/20201126115039316.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RmbHlfeng=,size_16,color_FFFFFF,t_70"></p>
+<p><strong>Intelligence:“The capacity to learn and solve problems ”</strong></p>
+<p><strong>(自主学习及解决问题的能力)</strong></p>
+<p><strong>Artificial Intelligence: The simulation of human intelligence by machines</strong></p>
+<p> <strong>(机器对人类智能的模仿)</strong></p>
+<h2 id="人工智能—核心定义"><a href="#人工智能—核心定义" class="headerlink" title="人工智能—核心定义"></a>人工智能—核心定义</h2><p>人工智能就其本质而言，是机器对人的思维或行为过程的模拟，让它能像人一样思考或行动</p>
+<p>从过去的信息中寻找规律（经验），将规律或经验吸收，并为未来的判断或决策提供依据。</p>
+<p><strong>核心点：学习、优化、决策</strong></p>
+<p><strong>部分应用场景</strong></p>
+<p><strong>AI安防：</strong>利用计算机视觉技术和大数据分析犯罪嫌疑人生活轨迹及可能出现的场所</p>
+<p><strong>AI金融：</strong>利用复杂的 AI 系统能极其迅速的做出交易决策。</p>
+<p><strong>AI工业制造：</strong>机器人代替工人在危险场所完成工作 ,在流水线上高效完成重复工作</p>
+<h2 id="人工智能发展阶段"><a href="#人工智能发展阶段" class="headerlink" title="人工智能发展阶段"></a>人工智能发展阶段</h2><p><strong>通用人工智能（“强”人工智能）：</strong>具备与人类同等智慧、或超越人类的人工智能，能表现正常人类所具有的所有智能行为。</p>
+<ul>
+<li>目前AI技术无法达到通用人工智能</li>
+<li>无法判断离通用人工智能还有多远</li>
+</ul>
+<p><strong>非通用人工智能（“弱”人工智能）：</strong>不需要具有人类完整的认知能力，甚至是完全不具有人类所拥有的感官认知能力</p>
+<ul>
+<li>可处理特定问题，在特定应用中很厉害</li>
+<li>目前AI处于此阶段</li>
+</ul>
+<h2 id="人工智能实现方法：符号人工智能-amp-机器学习（Symbolic-Artificial-Intelligence-amp-Machine-learning"><a href="#人工智能实现方法：符号人工智能-amp-机器学习（Symbolic-Artificial-Intelligence-amp-Machine-learning" class="headerlink" title="人工智能实现方法：符号人工智能&amp;机器学习（Symbolic Artificial Intelligence &amp; Machine learning)"></a>人工智能实现方法：符号人工智能&amp;机器学习（Symbolic Artificial Intelligence &amp; Machine learning)</h2><h3 id="符号学习"><a href="#符号学习" class="headerlink" title="符号学习"></a>符号学习</h3><p>基于逻辑与规则的学习方法，用一些特定的符号来表示现实的事物或者观念(符号 不局限于图像文字，还包括了既定的逻辑、规则等）</p>
+<p>➢ 根据既定的逻辑和顺序告诉机器 接下来做什么</p>
+<p>➢ 遵循if…then…原则</p>
+<p>𝑎 = 10, 𝑏 = 20 𝑐 =  𝑎 + 𝑏, 𝑖𝑓 𝑎 &gt; 𝑏； 𝑐 =𝑎 − 𝑏, 𝑖𝑓 𝑎 &lt; 𝑏</p>
+<p>𝑐 = ? ?</p>
+<p>**需要先知道或假设信息的逻辑、规律 **</p>
+<h3 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h3><p>从数据中自动分析获得规律，并利用规律对未知数据进行预测或用于解决实际问题的方法。</p>
+<p>➢从数据中学习规律，实现对原有推 理的更新，实现“自我优化”</p>
+<p>➢ 现阶段主流的AI学习算法 </p>
+<p>只要将数据给机器，机器会自动寻找a b c之间的关系。</p>
+<h2 id="机器学习与深度学习的关系"><a href="#机器学习与深度学习的关系" class="headerlink" title="机器学习与深度学习的关系"></a>机器学习与深度学习的关系</h2><h3 id="机器学习是一种实现人工智能的方法，-深度学习是一种实现机器学习的技术。"><a href="#机器学习是一种实现人工智能的方法，-深度学习是一种实现机器学习的技术。" class="headerlink" title="机器学习是一种实现人工智能的方法， 深度学习是一种实现机器学习的技术。"></a>机器学习是一种实现人工智能的方法， 深度学习是一种实现机器学习的技术。</h3><p>机器学习：从数据中自动分析获得规律，并利 用规律对未知数据进行预测或用于解决实际问 题的方法。</p>
+<p>深度学习：机器在对数据进行分析时，将引入 类人类神经结构模型，实现对复杂数据的理解 与推理，通常可应用于更为复杂的任务中。<br>机器学习概念、应用、实现方法</p>
+<h3 id="现实问题思考：营业额预测"><a href="#现实问题思考：营业额预测" class="headerlink" title="现实问题思考：营业额预测"></a>现实问题思考：营业额预测</h3><p>店铺A第一周营业额为5000，每周增长10%，第10周是多少？</p>
+<p><img src="https://img-blog.csdnimg.cn/202011261238201.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/20210303092401724.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201126123912918.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RmbHlfeng=,size_16,color_FFFFFF,t_70" style="zoom:20%;" />      <img src="https://img-blog.csdnimg.cn/20201126123919375.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RmbHlfeng=,size_16,color_FFFFFF,t_70" style="zoom:30%;" /></p>
+<h3 id="现实问题思考—自动图像分类"><a href="#现实问题思考—自动图像分类" class="headerlink" title="现实问题思考—自动图像分类"></a>现实问题思考—自动图像分类</h3><p>目标：以下六组图片，按照自己喜爱的方式分成两组<br>        <img src="https://img-blog.csdnimg.cn/20210303085910394.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70"></p>
+<p>分组一：站着或非站着</p>
+<p>分组二：白色或黄色</p>
+<p>分组三：吐舌头或不吐舌头</p>
+<h2 id="机器学习应用与概念"><a href="#机器学习应用与概念" class="headerlink" title="机器学习应用与概念"></a>机器学习应用与概念</h2><p><strong>机器学习是一种实现人工智能的方法。</strong> 从数据中寻找规律、建立关系，根据建立的关系去解决问题。</p>
+<h2 id="机器学习应用场景"><a href="#机器学习应用场景" class="headerlink" title="机器学习应用场景"></a>机器学习应用场景</h2><ul>
+<li>数据挖掘     </li>
+<li>无人驾驶</li>
+<li>机器视觉</li>
+<li>语言理解</li>
+</ul>
+<p><strong>实现人工智能的主流方法！</strong></p>
+<h2 id="四大学习方法"><a href="#四大学习方法" class="headerlink" title="四大学习方法"></a>四大学习方法</h2><h3 id="•-监督学习-（Supervised-Learning）"><a href="#•-监督学习-（Supervised-Learning）" class="headerlink" title="• 监督学习 （Supervised Learning）:"></a>• 监督学习 （Supervised Learning）:</h3><p>在分类过程中，如果所有训练数据都有标签，则为有<strong>监督学习</strong>，用于分类或者回归。</p>
+<h3 id="•-无监督学习（Unsupervised-Learning）"><a href="#•-无监督学习（Unsupervised-Learning）" class="headerlink" title="• 无监督学习（Unsupervised Learning）:"></a>• 无监督学习（Unsupervised Learning）:</h3><p>如果数据没有标签，显然就是<strong>无监督学习</strong>了，也即聚类（clustering）。</p>
+<h3 id="•-半监督学习-Semi-supervised-Learning"><a href="#•-半监督学习-Semi-supervised-Learning" class="headerlink" title="• 半监督学习 (Semi-supervised Learning) :"></a>• 半监督学习 (Semi-supervised Learning) :</h3><p>其训练数据的一部分是有标签的，另一部分没有标签，而没标签数据的数量常常远远大于有标签数据数量（这也是符合现实情况的）。<br>隐藏在半监督学习下的基本规律在于：数据的分布必然不是完全随机的，通过一些有标签数据的局部特征，以及更多没标签数据的整体分布，就可以得到可以接受甚至是非常好的分类结果。</p>
+<h3 id="•-强化学习-Reinforcement-Learning"><a href="#•-强化学习-Reinforcement-Learning" class="headerlink" title="• 强化学习 (Reinforcement Learning) :"></a>• 强化学习 (Reinforcement Learning) :</h3><p>强化学习是针对你再次没有标注数据集的情况而言的，但你还是有办法来区分是否越来越接近目标（回报函数（reward function））。经典的儿童游戏——“hotter or colder”。（Huckle Buckle Beanstalk的一个变体）是这个概念的一个很好的例证。你的任务是找到一个隐藏的目标物件，然后你的朋友会喊出你是否越来越hotter（更接近）或colder（远离）目标物件。“Hotter/colder”就是回报函数，而算法的目标就是最大化回报函数。你可以把回报函数当做是一种延迟和稀疏的标签数据形式：而不是在每个数据点中获得特定的“right/wrong”答案，你会得到一个延迟的反应，而它只会提示你是否在朝着目标方向前进。</p>
+<h2 id="四大学习方法应用场景"><a href="#四大学习方法应用场景" class="headerlink" title="四大学习方法应用场景"></a>四大学习方法应用场景</h2><p><img src="https://img-blog.csdnimg.cn/202011261252548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2RmbHlfeng=,size_16,color_FFFFFF,t_70"></p>
 
                 
             </div>
@@ -615,7 +593,7 @@ X_test <span class="token operator">=</span> np<span class="token punctuation">.
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/03/7099.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/03/7099.html</a>
+                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/01/25359.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/01/25359.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -655,10 +633,6 @@ X_test <span class="token operator">=</span> np<span class="token punctuation">.
                             
                                 <a href="/JustinLibo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
                                     <span class="chip bg-color">机器学习</span>
-                                </a>
-                            
-                                <a href="/JustinLibo.github.io/tags/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92/">
-                                    <span class="chip bg-color">线性回归</span>
                                 </a>
                             
                         </div>
@@ -834,13 +808,13 @@ X_test <span class="token operator">=</span> np<span class="token punctuation">.
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/03/03/7096.html">
+                <a href="/JustinLibo.github.io/2021/02/01/18760.html">
                     <div class="card-image">
                         
                         
-                        <img src="/JustinLibo.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="MLP实现图像多分类">
+                        <img src="/JustinLibo.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="JupyterNotebook的优化与配置">
                         
-                        <span class="card-title">MLP实现图像多分类</span>
+                        <span class="card-title">JupyterNotebook的优化与配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -851,7 +825,7 @@ X_test <span class="token operator">=</span> np<span class="token punctuation">.
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-01
                         </span>
                         <span class="publish-author">
                             
@@ -861,6 +835,10 @@ X_test <span class="token operator">=</span> np<span class="token punctuation">.
                                     人工智能基础
                                 </a>
                             
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -868,16 +846,8 @@ X_test <span class="token operator">=</span> np<span class="token punctuation">.
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/JustinLibo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/JustinLibo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">深度学习</span>
-                    </a>
-                    
-                    <a href="/JustinLibo.github.io/tags/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/">
-                        <span class="chip bg-color">多层感知机</span>
+                    <a href="/JustinLibo.github.io/tags/Anaconda/">
+                        <span class="chip bg-color">Anaconda</span>
                     </a>
                     
                 </div>
@@ -891,12 +861,13 @@ X_test <span class="token operator">=</span> np<span class="token punctuation">.
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/03/03/7095.html">
+                <a href="/JustinLibo.github.io/2021/01/05/34495.html">
                     <div class="card-image">
                         
-                        <img src="https://blog.chasingwind.top/s0YpbF.png" class="responsive-img" alt="机器学习之聚类—Kmeans实战">
                         
-                        <span class="card-title">机器学习之聚类—Kmeans实战</span>
+                        <img src="/JustinLibo.github.io/medias/featureimages/7.jpg" class="responsive-img" alt="在JupyterNotebook中显示汉字">
+                        
+                        <span class="card-title">在JupyterNotebook中显示汉字</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -907,7 +878,7 @@ X_test <span class="token operator">=</span> np<span class="token punctuation">.
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-05
                             </span>
                         <span class="publish-author">
                             
@@ -917,6 +888,10 @@ X_test <span class="token operator">=</span> np<span class="token punctuation">.
                                     人工智能基础
                                 </a>
                             
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -924,12 +899,8 @@ X_test <span class="token operator">=</span> np<span class="token punctuation">.
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/JustinLibo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/JustinLibo.github.io/tags/K-Means/">
-                        <span class="chip bg-color">K-Means</span>
+                    <a href="/JustinLibo.github.io/tags/Anaconda/">
+                        <span class="chip bg-color">Anaconda</span>
                     </a>
                     
                 </div>
@@ -1078,7 +1049,7 @@ X_test <span class="token operator">=</span> np<span class="token punctuation">.
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14.7k</span>&nbsp;字
+                class="white-color">16.4k</span>&nbsp;字
             
             
             

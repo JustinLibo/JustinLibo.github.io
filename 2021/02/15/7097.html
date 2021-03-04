@@ -5,7 +5,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="机器学习---逻辑回归:考试通过预测, HandsomeBo&#39;s Blog">
+    <meta name="keywords" content="深度学习之卷积神经网络, HandsomeBo&#39;s Blog">
     <meta name="description" content="热爱生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>机器学习---逻辑回归:考试通过预测 | HandsomeBo&#39;s Blog</title>
+    <title>深度学习之卷积神经网络 | HandsomeBo&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/medias/ironman.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">机器学习---逻辑回归:考试通过预测</h1>
+                    <h1 class="description center-align post-title">深度学习之卷积神经网络</h1>
                 </div>
             </div>
         </div>
@@ -450,8 +450,12 @@
                                 <span class="chip bg-color">机器学习</span>
                             </a>
                         
-                            <a href="/JustinLibo.github.io/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">
-                                <span class="chip bg-color">逻辑回归</span>
+                            <a href="/JustinLibo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                                <span class="chip bg-color">深度学习</span>
+                            </a>
+                        
+                            <a href="/JustinLibo.github.io/tags/CNN/">
+                                <span class="chip bg-color">CNN</span>
                             </a>
                         
                     </div>
@@ -475,7 +479,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-03
+                    2021-02-15
                 </div>
                 
 
@@ -484,14 +488,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    3 分
                 </div>
                 
 
@@ -506,161 +510,53 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="什么时候用逻辑回归"><a href="#什么时候用逻辑回归" class="headerlink" title="什么时候用逻辑回归"></a>什么时候用逻辑回归</h3><p>我们想一想，当我们要解决一个分类问题，尤其是一个二分类问题时，如果我们用线性回归去解决就会面临这样一个问题：样本量变大后，准确率会下降。这时为了更好地解决这种分类问题，我们就需要采用逻辑回归的方法了。</p>
-<h3 id="逻辑回归方程"><a href="#逻辑回归方程" class="headerlink" title="逻辑回归方程"></a>逻辑回归方程</h3><p>我们先看一看逻辑回归方程</p>
-<p><img src="https://img-blog.csdnimg.cn/20200503163629651.png"></p>
-<p><img src="https://img-blog.csdnimg.cn/20200503163309417.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70"></p>
-<p>可以发现当样本值越大y越接近1，样本值越小y越接近0，以0.5为分界点就可以将y分成以下两种情况。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200503163740957.png"></p>
-<p>这时负样本就是0，正样本就是1，0和1就是我们给样本定义的标签。在考试通过问题中，可以用1代表通过（pass）,用0代表失败（failed），这样就可以通过标签0和1将失败和通过进行一个分类，就可以很好地解决二分类问题了。</p>
-<p>当问题更复杂时，可以用g(x)代替x，然后就可以根据g(x)寻找最合适的决策边界从而解决二分类问题<br><img src="https://img-blog.csdnimg.cn/20200503170112969.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70"></p>
-<p>比如下面这个图形：<img src="https://img-blog.csdnimg.cn/20200503170607468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70"></p>
-<p>此时虚线部分就是它的决策边界</p>
-<p><img src="https://img-blog.csdnimg.cn/20200503170813600.png"></p>
-<p><img src="https://img-blog.csdnimg.cn/20200503170919145.png" alt="在这里插入图片描述"></p>
-<p><img src="https://img-blog.csdnimg.cn/202005031709328.png" alt="在这里插入图片描述"></p>
-<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p><strong>任务:</strong></p>
-<p><strong>基于examdata.csv数据，建立逻辑回归模型 预测Exam1 = 70, Exam2 = 60时，该同学在Exam3是 passed or failed; 建立二阶边界，提高模型准确度。</strong></p>
-<p>先来建立一阶边界看看准确率：</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#加载数据</span>
-<span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-data <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">'examdata.csv'</span><span class="token punctuation">)</span>
-data<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#数据预览</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/2020050316474557.png"></p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#可视化数据</span>
-<span class="token operator">%</span>matplotlib inline
-<span class="token keyword">from</span> matplotlib <span class="token keyword">import</span> pyplot <span class="token keyword">as</span> plt <span class="token comment" spellcheck="true">#导入相关包</span>
-fig1 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#新建一个画布</span>
-plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam1'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam2'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#导入数据</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Exam1-Exam2'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#图形名称</span>
-plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'Exam1'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#横坐标</span>
-plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'Exam2'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#纵坐标</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#展示图形</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503164836847.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#添加标签</span>
-mask <span class="token operator">=</span> data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Pass'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span> <span class="token comment" spellcheck="true">#如果pass等于1就是true，否则就是false</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>mask<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#预览  这里可以和最开始的数据预览图比较起来看，前五项Pass的值是0，0，0，1，1，所以这里前五项的结果就如下图所示了。</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/2020050316495633.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#将通过考试和未通过考试的用图形来区分开</span>
-fig2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
-passed <span class="token operator">=</span> plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam1'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>mask<span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam2'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>mask<span class="token punctuation">]</span><span class="token punctuation">)</span>
-failed <span class="token operator">=</span> plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam1'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">~</span>mask<span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam2'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">~</span>mask<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#这里的~mask是取反，可以理解为0</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Exam1-Exam2'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'Exam1'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'Exam2'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">(</span>passed<span class="token punctuation">,</span>failed<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'passed'</span><span class="token punctuation">,</span><span class="token string">'failed'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503165032932.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#将数据赋值给相关变量</span>
-x <span class="token operator">=</span> data<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'Pass'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#这里是去除pass那一列</span>
-y <span class="token operator">=</span> data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Pass'</span><span class="token punctuation">]</span> <span class="token comment" spellcheck="true">#将pass那一列的值赋给y</span>
-x1 <span class="token operator">=</span> data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam1'</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#将Exam1那一列的值赋给x1</span>
-x2 <span class="token operator">=</span> data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam2'</span><span class="token punctuation">]</span><span class="token comment" spellcheck="true">#将Exam2那一列的值赋给x2</span>
-x1<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#这里以x1为例看一下预览效果，正确;</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503165111299.png" alt=" "></p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>shape<span class="token punctuation">,</span>y<span class="token punctuation">.</span>shape<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#看一下数据维度</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503165134681.png" alt=" "></p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#建立模型以及训练模型</span>
-<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>linear_model <span class="token keyword">import</span> LogisticRegression
-LR <span class="token operator">=</span> LogisticRegression<span class="token punctuation">(</span><span class="token punctuation">)</span>
-LR<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x<span class="token punctuation">,</span>y<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#训练模型</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503165152787.png" alt=" "></p>
-<p>这里模型已经训练好了</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#预测结果</span>
-y_predict <span class="token operator">=</span> LR<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>y_predict<span class="token punctuation">)</span> 
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503165326491.png" alt=" "></p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#预测结果</span>
-<span class="token comment" spellcheck="true">#评估模型表现 看一下准确率</span>
-<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> accuracy_score
-accuracy <span class="token operator">=</span> accuracy_score<span class="token punctuation">(</span>y<span class="token punctuation">,</span>y_predict<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>accuracy<span class="token punctuation">)</span> 
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503165401505.png" alt=" "></p>
-<p>准确率达到了0.89，虽然感觉挺高的，但是判断错误的还是很多的</p>
-<pre class=" language-python"><code class="language-python">LR<span class="token punctuation">.</span>intercept_ <span class="token comment" spellcheck="true">#截距</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503165756492.png" alt=" "></p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#θo,θ1,θ2</span>
-theta0 <span class="token operator">=</span> LR<span class="token punctuation">.</span>intercept_
-theta1<span class="token punctuation">,</span>theta2 <span class="token operator">=</span> LR<span class="token punctuation">.</span>coef_<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>LR<span class="token punctuation">.</span>coef_<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>theta0<span class="token punctuation">,</span>theta1<span class="token punctuation">,</span>theta2<span class="token punctuation">)</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503171207715.png" alt=" "></p>
-<pre class=" language-python"><code class="language-python">x2_new <span class="token operator">=</span> <span class="token operator">-</span><span class="token punctuation">(</span>theta0<span class="token operator">+</span>theta1<span class="token operator">*</span>x1<span class="token punctuation">)</span><span class="token operator">/</span>theta2
-<span class="token keyword">print</span><span class="token punctuation">(</span>x2_new<span class="token punctuation">)</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503171318690.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>求解x2_new 时可参照以下公式：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200503171650737.png" alt=" "></p>
-<pre class=" language-python"><code class="language-python">fig3 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
-passed<span class="token operator">=</span>plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam1'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>mask<span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam2'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>mask<span class="token punctuation">]</span><span class="token punctuation">)</span>
-failed<span class="token operator">=</span>plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam1'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">~</span>mask<span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam2'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">~</span>mask<span class="token punctuation">]</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x1<span class="token punctuation">,</span>x2_new<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#画出决策边界</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Exam1-Exam2'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'Exam1'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'Exam2'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">(</span>passed<span class="token punctuation">,</span>failed<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'passed'</span><span class="token punctuation">,</span><span class="token string">'failed'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>  
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503171506590.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>然后我们来看一看建立的二阶边界函数的模型的效果</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#建立一个二阶的边界</span>
-<span class="token comment" spellcheck="true">#创建新数据</span>
-x1_2 <span class="token operator">=</span> x1<span class="token operator">*</span>x1
-x2_2 <span class="token operator">=</span> x2<span class="token operator">*</span>x2
-x1_x2 <span class="token operator">=</span> x1<span class="token operator">*</span>x2
-</code></pre>
-<pre class=" language-python"><code class="language-python">x_new <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;'x1':x1,'x2':x2,'x1_2':x1_2,'x2_2':x2_2,'x1_x2':x1_x2&amp;#125;#将所有数据放到一个字典里面</span>
-x_new <span class="token operator">=</span> pd<span class="token punctuation">.</span>DataFrame<span class="token punctuation">(</span>x_new<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#方便后面进行模型数据的加载</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>x_new<span class="token punctuation">)</span><span class="token comment" spellcheck="true">#预览</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503172030398.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#建立并训练一个新模型</span>
-LR2 <span class="token operator">=</span> LogisticRegression<span class="token punctuation">(</span><span class="token punctuation">)</span>
-LR2<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>x_new<span class="token punctuation">,</span>y<span class="token punctuation">)</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503172058487.png" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20200503172217431.png" alt="在这里插入图片描述"></p>
-<p>准确率达到了百分之百，可以看处通过二阶边界建立的模型比通过一阶边界建立的模型准确率高很多。</p>
-<pre class=" language-python"><code class="language-python">x1_new <span class="token operator">=</span> x1<span class="token punctuation">.</span>sort_values<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#将x1_new从小到大排序</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>x1_new<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#预览</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503172409419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>这里是保证后面画图不出现交叉，使图形更好看、更直观</p>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#θo,θ1,θ2，θ3,θ4，θ5</span>
-theta0 <span class="token operator">=</span> LR2<span class="token punctuation">.</span>intercept_
-theta1<span class="token punctuation">,</span>theta2<span class="token punctuation">,</span>theta3<span class="token punctuation">,</span>theta4<span class="token punctuation">,</span>theta5 <span class="token operator">=</span> LR2<span class="token punctuation">.</span>coef_<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>LR2<span class="token punctuation">.</span>coef_<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span>LR2<span class="token punctuation">.</span>coef_<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span>LR2<span class="token punctuation">.</span>coef_<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span>LR2<span class="token punctuation">.</span>coef_<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span>
-a <span class="token operator">=</span> theta4
-b <span class="token operator">=</span> theta5<span class="token operator">*</span>x1_new<span class="token operator">+</span>theta2
-c <span class="token operator">=</span> theta0<span class="token operator">+</span>theta1<span class="token operator">*</span>x1_new<span class="token operator">+</span>theta3<span class="token operator">*</span>x1_new<span class="token operator">*</span>x1_new
-x2_new_boundary <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token operator">-</span>b<span class="token operator">+</span>np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>b<span class="token operator">*</span>b<span class="token number">-4</span><span class="token operator">*</span>a<span class="token operator">*</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span>a<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>x2_new_boundary<span class="token punctuation">)</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503172607589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>θo,θ1,θ2,θ3,θ4,θ5的求解可以根据以下公式：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200503173523673.png" alt=" "></p>
-<p>因为成绩都是正数，所以就不用图中x2那个表达式了。</p>
-<pre class=" language-python"><code class="language-python">fig5 <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
-passed<span class="token operator">=</span>plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam1'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>mask<span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam2'</span><span class="token punctuation">]</span><span class="token punctuation">[</span>mask<span class="token punctuation">]</span><span class="token punctuation">)</span>
-failed<span class="token operator">=</span>plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam1'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">~</span>mask<span class="token punctuation">]</span><span class="token punctuation">,</span>data<span class="token punctuation">.</span>loc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span><span class="token string">'Exam2'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">~</span>mask<span class="token punctuation">]</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x1_new<span class="token punctuation">,</span>x2_new_boundary<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#画出决策边界</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'Exam1-Exam2'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">'Exam1'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">'Exam2'</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">(</span>passed<span class="token punctuation">,</span>failed<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">(</span><span class="token string">'passed'</span><span class="token punctuation">,</span><span class="token string">'failed'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20200503172633648.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
+                <p><strong>推荐阅读：</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.sohu.com/a/241338315_787107">https://www.sohu.com/a/241338315_787107</a></p>
+</blockquote>
+<p>文章把VGG16写的相当通俗易懂。</p>
+<h2 id="图像卷积运算"><a href="#图像卷积运算" class="headerlink" title="图像卷积运算"></a>图像卷积运算</h2><p>对图像矩阵与滤波器矩阵进行对应相乘再求和运算，转化得到新的矩阵。作用:快速定位图像中某些边缘特征<br>英文: convolution<br>CNN<br>A与B的卷积通常表示为:A*B或convolution(A,B)<br>···· X11 X12 X13<br>A= X21 X22 X23<br>···· X31 X32 X33<br>····<br>F= W11 W12<br>···· W21 W22</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124549978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124602212.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>包含竖向轮廓的区域非常亮(灰度值越大月亮）</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124614710.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>计算机根据样本图片，自动寻找合适的轮廓过滤器，对新图片进行轮廓匹配<br> 池化:按照一个固定规则对图像矩阵进行处理，将其转换为更低维度的矩阵<br> 最大法池化(Max-pooling)</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124632527.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>Stride为窗口滑动步长，用于池化、卷积的计算中。<br> 保留核心信息的情况下，实现维度缩减<br> 把卷积、池化、mlp先后连接在一起，组成卷积神经网络。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124645139.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124658628.png" alt=" "></p>
+<p>作用:<br> 1、使部分神经元为0，防止过拟合<br> 2、助于模型的求解<br> Relu函数:f(x) = max(x, 0)</p>
+<p><img src="https://img-blog.csdnimg.cn/20210303232258347.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>转化成全连接层</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124808487.png" alt=" "></p>
+<h2 id="卷积神经网络两大特点："><a href="#卷积神经网络两大特点：" class="headerlink" title="卷积神经网络两大特点："></a>卷积神经网络两大特点：</h2><ol>
+<li>**参数共享(parameter sharing):**同一个特征过滤器可用于整张图片</li>
+<li>**稀疏连接(sparsity of connections):**生成的特征图片每个节点只与原图片中特定节点连接</li>
+</ol>
+<p><img src="https://img-blog.csdnimg.cn/20210109124832181.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124838107.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124844112.png" alt=" "></p>
+<p>？×？=（n-f+1）×(n-f+1)<br> 卷积运算导致的两个问题:<br> 图像被压缩，造成信息丢失<br> 边缘信息使用少，容易被忽略<br> 图像填充(padding)<br> 通过在图像各边增加像素，使其在进行卷积运算后维持原图大小</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124921632.png" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124926456.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>通过padding增加像素的数量，由过滤器尺寸与stride决定</p>
+<p><img src="https://img-blog.csdnimg.cn/20210109124938163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125005339.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125013824.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125022703.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<h2 id="经典的CNN模型"><a href="#经典的CNN模型" class="headerlink" title="经典的CNN模型"></a>经典的CNN模型</h2><p>1、参考经典的CNN结构搭建新模型<br> 2、使用经典的CNN模型结构对图像预处理，再建立MLP模型<br> 经典的CNN模型:</p>
+<h3 id="LeNet-5"><a href="#LeNet-5" class="headerlink" title="LeNet-5"></a><strong>LeNet-5</strong></h3><p><img src="https://img-blog.csdnimg.cn/20210109125059419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>（1）6个5×5的过滤器滑动窗口为1<br>（2）平均值池化：2×2的滑动窗口是2<br>（3）16个5×5的过滤器滑动窗口为1<br>（4）池化：2×2的滑动窗口是2<br>（5）展开<br>（6）进行MLP模型<br>（7）输出10个类别<br>输入图像:32 X 32灰度图，1个通道(channel)训练参数:约60,000个<br>特点:<br>1、随着网络越深，图像的高度和宽度在缩小，通道数在增加<br>2、卷积与池化先后成对使用</p>
+<h3 id="AlexNet"><a href="#AlexNet" class="headerlink" title="AlexNet"></a>AlexNet</h3><p><img src="https://img-blog.csdnimg.cn/20210109125118747.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p>（1）96个11×11的过滤器滑动窗口为4<br> （2）最大值池化：3×3的滑动窗口是2<br> （3）256个5×5的过滤器滑动窗口为1<br> （4）最大值池化：3×3的滑动窗口是2<br> …<br> （n）输出1000个类别<br>输入图像:227X 227X 3 RGB图，3个通道训练参数:约60,000,000个<br>特点:<br>1、适用于识别较为复杂的彩色图，可识别1000种类别<br>2、结构比LeNet更为复杂，使用Relu作为激活函数<br>学术界开始相信深度学习技术,<br>在计算机视觉应用中可以得到很不错的结果。</p>
+<h3 id="VGG"><a href="#VGG" class="headerlink" title="VGG"></a><strong>VGG</strong></h3><p><img src="https://img-blog.csdnimg.cn/20210109125202651.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125208140.png" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125213790.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/2021010912522242.png" alt=" "></p>
+<p>所有的卷积都是64个3×3的过滤器移动窗口是1，最大值池化：2×2的滑动窗口是2<br>不断重复同样的步骤<br>输入图像: 227 X 227X 3 RGB图，3个通道训练参数:约138,000,000个<br>特点:<br>1、所有卷积层filter 宽和高都是3，步长为1,padding 都使用same convolution;<br>2、所有池化层的 filter 宽和高都是2，步长都是2;<br>3、相比alexnet，有更多的filter用于提取轮廓信息，具有更高精准性</p>
+<h2 id="经典的CNN模型用于新场景"><a href="#经典的CNN模型用于新场景" class="headerlink" title="经典的CNN模型用于新场景"></a>经典的CNN模型用于新场景</h2><p><strong>1、使用经典的CNN模型结构对图像预处理，再建立MLP模型;</strong><br>（1）加载经典的CNN模型，剥除其FC层，对图像进行预处理<br>（2）把预处理完成的数据作为输入，分类结果为输出，建立一个mlp模型<br>（3）模型训练<br><strong>2、参考经典的CNN结构搭建新模型</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125247163.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
+<p><img src="https://img-blog.csdnimg.cn/20210109125253460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1dVSFU2NDg=,size_16,color_FFFFFF,t_70" alt=" "></p>
 
                 
             </div>
@@ -687,7 +583,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/03/7094.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/03/7094.html</a>
+                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/15/7097.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/02/15/7097.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -729,8 +625,12 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                                     <span class="chip bg-color">机器学习</span>
                                 </a>
                             
-                                <a href="/JustinLibo.github.io/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">
-                                    <span class="chip bg-color">逻辑回归</span>
+                                <a href="/JustinLibo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                                    <span class="chip bg-color">深度学习</span>
+                                </a>
+                            
+                                <a href="/JustinLibo.github.io/tags/CNN/">
+                                    <span class="chip bg-color">CNN</span>
                                 </a>
                             
                         </div>
@@ -906,13 +806,13 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/03/03/7098.html">
+                <a href="/JustinLibo.github.io/2021/02/17/7097.html">
                     <div class="card-image">
                         
                         
-                        <img src="/JustinLibo.github.io/medias/featureimages/3.jpg" class="responsive-img" alt="机器学习：聚类">
+                        <img src="/JustinLibo.github.io/medias/featureimages/9.jpg" class="responsive-img" alt="CNN实现猫狗图像分类">
                         
-                        <span class="card-title">机器学习：聚类</span>
+                        <span class="card-title">CNN实现猫狗图像分类</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -923,65 +823,8 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
                         </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/" class="post-category">
-                                    人工智能基础
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/JustinLibo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/JustinLibo.github.io/tags/K-Means/">
-                        <span class="chip bg-color">K-Means</span>
-                    </a>
-                    
-                    <a href="/JustinLibo.github.io/tags/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">无监督学习</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/JustinLibo.github.io/2021/03/03/7097.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/JustinLibo.github.io/medias/featureimages/8.jpg" class="responsive-img" alt="深度学习之卷积神经网络">
-                        
-                        <span class="card-title">深度学习之卷积神经网络</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
-                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1007,6 +850,63 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     
                     <a href="/JustinLibo.github.io/tags/CNN/">
                         <span class="chip bg-color">CNN</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/JustinLibo.github.io/2021/02/11/7096.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/JustinLibo.github.io/medias/featureimages/5.jpg" class="responsive-img" alt="MLP实现图像多分类">
+                        
+                        <span class="card-title">MLP实现图像多分类</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-11
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    人工智能基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/JustinLibo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
+                    </a>
+                    
+                    <a href="/JustinLibo.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">深度学习</span>
+                    </a>
+                    
+                    <a href="/JustinLibo.github.io/tags/%E5%A4%9A%E5%B1%82%E6%84%9F%E7%9F%A5%E6%9C%BA/">
+                        <span class="chip bg-color">多层感知机</span>
                     </a>
                     
                 </div>
@@ -1155,7 +1055,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14.7k</span>&nbsp;字
+                class="white-color">16.4k</span>&nbsp;字
             
             
             

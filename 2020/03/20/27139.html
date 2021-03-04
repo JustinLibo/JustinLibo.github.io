@@ -5,7 +5,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="花津南路(完....), HandsomeBo&#39;s Blog">
+    <meta name="keywords" content="Qt---信号和槽, HandsomeBo&#39;s Blog">
     <meta name="description" content="热爱生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>花津南路(完....) | HandsomeBo&#39;s Blog</title>
+    <title>Qt---信号和槽 | HandsomeBo&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/medias/ironman.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('http://blog.chasingwind.top/626BJGY03.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">花津南路(完....)</h1>
+                    <h1 class="description center-align post-title">Qt---信号和槽</h1>
                 </div>
             </div>
         </div>
@@ -446,12 +446,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/JustinLibo.github.io/tags/%E6%97%85%E8%A1%8C/">
-                                <span class="chip bg-color">旅行</span>
+                            <a href="/JustinLibo.github.io/tags/%E5%B7%A5%E5%85%B7/">
+                                <span class="chip bg-color">工具</span>
                             </a>
                         
-                            <a href="/JustinLibo.github.io/tags/%E6%91%84%E5%BD%B1/">
-                                <span class="chip bg-color">摄影</span>
+                            <a href="/JustinLibo.github.io/tags/GUI/">
+                                <span class="chip bg-color">GUI</span>
                             </a>
                         
                     </div>
@@ -462,8 +462,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/JustinLibo.github.io/categories/%E6%97%85%E8%A1%8C%E5%BF%97/" class="post-category">
-                                旅行志
+                            <a href="/JustinLibo.github.io/categories/Qt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                Qt学习笔记
                             </a>
                         
                     </div>
@@ -475,7 +475,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-05-31
+                    2020-03-20
                 </div>
                 
 
@@ -484,14 +484,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    159
+                    1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -506,143 +506,51 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1><ul>
-<li>不知道什么时候的事情了, 对拍好看的照片总是有点向往</li>
-<li>有台相机还是蛮好的 , 有空的时候也有动力跑出去瞎拍一通</li>
-<li>不是配置狗 , 相机 Sony Nex 5T , 16-50 mm ,f3.5-5.6 , 七工匠 25mm f1.8</li>
-<li>后期用的是LightRoom  (瞎调)</li>
-</ul>
-<h2 id="2019-06-11"><a href="#2019-06-11" class="headerlink" title="2019-06-11"></a>2019-06-11</h2><ul>
-<li><p>镜湖</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/611JH03.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/611JH02.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/611JH01.jpg"></p>
-</blockquote>
-</li>
-<li><p>中江桥</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/611ZJQ01.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/611ZJQ02.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/611ZJQ03.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/611ZJQ04.jpg"></p>
-</blockquote>
+                <h1 id="信号与槽（Signal-amp-Slot）："><a href="#信号与槽（Signal-amp-Slot）：" class="headerlink" title="信号与槽（Signal &amp; Slot）："></a>信号与槽（Signal &amp; Slot）：</h1><p><strong>Qt</strong>编程的基础，也是 Qt 的一大创新。因为有了信号与槽的编程机制，在 Qt 中处理界面各个组件的交互操作时变得更加直观和简单。</p>
+<h2 id="信号（Signal）"><a href="#信号（Signal）" class="headerlink" title="信号（Signal）"></a>信号（Signal）</h2><p>就是在特定情况下被发射的事件，例如<strong>PushButton</strong> 最常见的信号就是鼠标单击时发射的 <strong>clicked()</strong> 信号，一个 <strong>ComboBox</strong> 最常见的信号是选择的列表项变化时发射的 <strong>CurrentIndexChanged()</strong> 信号。</p>
+<p> GUI 程序设计的主要内容就是对界面上各组件的信号的响应，只需要知道什么情况下发射哪些信号，合理地去响应和处理这些信号就可以了。</p>
+<h2 id="槽（Slot）"><a href="#槽（Slot）" class="headerlink" title="槽（Slot）"></a>槽（Slot）</h2><p>就是对信号响应的函数。槽就是一个函数，与一般的C++函数是一样的，可以定义在类的任何部分（public、private 或 protected），可以具有任何参数，也可以被直接调用。槽函数与一般的函数不同的是：槽函数可以与一个信号关联，当信号被发射时，关联的槽函数被自动执行。</p>
+<h2 id="调用实现"><a href="#调用实现" class="headerlink" title="调用实现"></a>调用实现</h2><p>信号与槽关联是用 <strong>QObject::connect()</strong> 函数实现的，其基本格式是：</p>
+<pre class=" language-c++"><code class="language-c++">QObject::connect(sender, SIGNAL(signal()), receiver, SLOT(slot()));
+</code></pre>
+<p><strong>connect()</strong> 是 <strong>QObject</strong> 类的一个静态函数，而 <strong>QObject</strong> 是所有 Qt 类的基类，在实际调用时可以忽略前面的限定符，所以可以直接写为：</p>
+<pre class=" language-c++"><code class="language-c++">connect(sender, SIGNAL(signal()), receiver, SLOT(slot()));
+</code></pre>
+<p>其中，<strong>sender</strong> 是发射信号的对象的名称，<strong>signal()</strong> 是信号名称。信号可以看做是特殊的函数，需要带括号，有参数时还需要指明参数。receiver 是接收信号的对象名称，slot() 是槽函数的名称，需要带括号，有参数时还需要指明参数。</p>
+<p> <strong>SIGNAL</strong> 和 <strong>SLOT</strong> 是 Qt 的宏，用于指明<strong>信号和槽</strong>，并将它们的参数转换为相应的字符串。例如，如下的语句：</p>
+<pre class=" language-c++"><code class="language-c++">QObject::connect(btnClose, SIGNAL(clicked()), Widget, SLOT(close()));
+</code></pre>
+<p>其作用就是将 <strong>btnClose</strong> 按钮的 <strong>clicked()</strong> 信号与窗体<strong>（Widget）</strong>的槽函数 <strong>close()</strong> 相关联，这样，当单击 btnClose 按钮（就是界面上的“Close”按钮）时，就会执行 Widget 的 close() 槽函数。</p>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><p> 关于信号与槽的使用，有以下一些规则需要注意：</p>
 <ul>
-<li>噪点奇多  看来是时候入手一个大光圈镜头了</li>
-</ul>
-<hr>
+<li><p>一个信号可以连接多个槽，例如：</p>
+<pre class=" language-c++"><code class="language-c++">connect(spinNum, SIGNAL(valueChanged(int)), this, SLOT(addFun(int));
+connect(spinNum, SIGNAL(valueChanged(int)), this, SLOT(updateStatus(int));
+</code></pre>
+<p>这是当一个对象 <strong>spinNum</strong> 的数值发生变化时，所在窗体有两个槽进行响应，一个 <strong>addFun()**用于计算，一个 **updateStatus()</strong> 用于更新状态。</p>
+<p>当一个信号与多个槽函数关联时，槽函数按照建立连接时的顺序依次执行。</p>
+<p>当信号和槽函数带有参数时，在 connect()函数里，<strong>要写明参数的类型，但可以不写参数名称。</strong></p>
 </li>
-<li><p>Others</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/611Others01.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/611Others02.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/611Others03.jpg"></p>
-</blockquote>
+<li><p>多个信号可以连接同一个槽，例如让三个选择颜色的 <strong>RadioButton</strong>的<strong>clicked()</strong> 信号关联到相同的一个自定义槽函数 **setTextFontColor()**。</p>
+<pre class=" language-c++"><code class="language-c++">connect(ui->rBtnBlue,SIGNAL(clicked()),this,SLOT(setTextFontColor()));
+connect(ui->rBtnRed,SIGNAL(clicked()),this,SLOT(setTextFontColor()));
+connect(ui->rBtnBlack,SIGNAL(clicked()),this,SLOT(setTextFontColor()));
+</code></pre>
+<p>这样，当任何一个 <strong>RadioButton</strong> 被单击时，都会执行 <strong>setTextFontColor()</strong> 函数。</p>
 </li>
-</ul>
-<h2 id="2019-06-16"><a href="#2019-06-16" class="headerlink" title="2019-06-16"></a>2019-06-16</h2><ul>
-<li><p>学校的荷花</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/616HH01.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/616HH02.jpg"></p>
-</blockquote>
+<li><p>一个信号可以连接另外一个信号，例如：</p>
+<pre class=" language-c++"><code class="language-c++">connect(spinNum, SIGNAL(valueChanged(int)), this, SIGNAL (refreshInfo(int));
+</code></pre>
+<p>这样，当一个信号发射时，也会发射另外一个信号，实现某些特殊的功能。</p>
 </li>
-</ul>
-<h2 id="2019-06-21"><a href="#2019-06-21" class="headerlink" title="2019-06-21"></a>2019-06-21</h2><ul>
-<li><p>八佰伴附近</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/622BBB01.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/622BBB02.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/622BBB03.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/622BBB04.jpg"></p>
-</blockquote>
+<li><p>严格的情况下，信号与槽的参数个数和类型需要一致，至少信号的参数不能少于槽的参数。如果不匹配，会出现编译错误或运行错误。</p>
 </li>
-<li><p>AHNU赭山校区</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/622ASD01.jpg"></p>
-</blockquote>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/622ASD02.jpg"></p>
-</blockquote>
+<li><p>在使用信号与槽的类中，必须在类的定义中加入宏 <strong>Q_OBJECT</strong>。</p>
 </li>
-<li><p>夜晚的镜湖</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/622JH01.jpg"></p>
-</blockquote>
+<li><p>当一个信号被发射时，与其关联的槽函数通常被立即执行，就像正常调用一个函数一样。只有当信号关联的所有槽函数执行完毕后，才会执行发射信号处后面的代码。</p>
 </li>
 </ul>
-<h2 id="2019-06-26"><a href="#2019-06-26" class="headerlink" title="2019-06-26"></a>2019-06-26</h2><ul>
-<li><p>滨江公园</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/626BJGY01.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626BJGY02.jpg"></p>
-</blockquote>
-</li>
-<li><p>长江二桥</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/626BJGY03.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626BJGY04.jpg"></p>
-</blockquote>
-</li>
-<li><p>长江江景</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/626BJGY05.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626BJGY07.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626BJGY09.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626BJGY08.jpg"></p>
-</blockquote>
-</li>
-<li><p>世茂滨江</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/626BJGY06.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626SMBJ01.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626SMBJ02.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626SMBJ03.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626SMBJ04.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626SMBJ05.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626SMBJ06.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626SMBJ07.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626SMBJ08.jpg"></p>
-</blockquote>
-</li>
-<li><p>天主教堂</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/626TZJT01.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626TZJT02.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626TZJT03.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626TZJT04.jpg"></p>
-</blockquote>
-</li>
-<li><p>Others</p>
-<blockquote>
-<p><img src="http://blog.chasingwind.top/626Others01.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626Others02.jpg"></p>
-<p><img src="http://blog.chasingwind.top/626Others03.jpg"></p>
-</blockquote>
-</li>
-</ul>
+<p> <strong>信号与槽机制是 Qt GUI 编程的基础，使用信号与槽机制可以比较容易地将信号与响应代码关联起来。</strong></p>
 
                 
             </div>
@@ -669,7 +577,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2019/05/31/7103.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2019/05/31/7103.html</a>
+                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2020/03/20/27139.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2020/03/20/27139.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -707,12 +615,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/JustinLibo.github.io/tags/%E6%97%85%E8%A1%8C/">
-                                    <span class="chip bg-color">旅行</span>
+                                <a href="/JustinLibo.github.io/tags/%E5%B7%A5%E5%85%B7/">
+                                    <span class="chip bg-color">工具</span>
                                 </a>
                             
-                                <a href="/JustinLibo.github.io/tags/%E6%91%84%E5%BD%B1/">
-                                    <span class="chip bg-color">摄影</span>
+                                <a href="/JustinLibo.github.io/tags/GUI/">
+                                    <span class="chip bg-color">GUI</span>
                                 </a>
                             
                         </div>
@@ -888,13 +796,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2019/07/09/2666.html">
+                <a href="/JustinLibo.github.io/2021/01/04/41489.html">
                     <div class="card-image">
                         
                         
-                        <img src="/JustinLibo.github.io/medias/featureimages/14.jpg" class="responsive-img" alt="大三个人总结">
+                        <img src="/JustinLibo.github.io/medias/featureimages/20.jpg" class="responsive-img" alt="Anaconda的介绍与使用">
                         
-                        <span class="card-title">大三个人总结</span>
+                        <span class="card-title">Anaconda的介绍与使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -905,14 +813,18 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-07-09
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-04
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/JustinLibo.github.io/categories/%E8%8A%B1%E6%B4%A5%E5%8D%97%E8%B7%AF/" class="post-category">
-                                    花津南路
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    人工智能基础
+                                </a>
+                            
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
                                 </a>
                             
                             
@@ -922,8 +834,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/JustinLibo.github.io/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/">
-                        <span class="chip bg-color">大学生活</span>
+                    <a href="/JustinLibo.github.io/tags/Anaconda/">
+                        <span class="chip bg-color">Anaconda</span>
                     </a>
                     
                 </div>
@@ -934,49 +846,49 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2019/05/31/7103.html">
+                <a href="/JustinLibo.github.io/2020/03/20/28487.html">
                     <div class="card-image">
                         
-                        <img src="http://blog.chasingwind.top/626BJGY03.jpg" class="responsive-img" alt="花津南路(完....)">
                         
-                        <span class="card-title">花津南路(完....)</span>
+                        <img src="/JustinLibo.github.io/medias/featureimages/12.jpg" class="responsive-img" alt="初识Qt">
+                        
+                        <span class="card-title">初识Qt</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            花津南路, 生活学习四年的地方,我想,总该要留些作为纪念的吧。慢慢地发现这座城市还是比较的美好
+                            
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/JustinLibo.github.io/categories/%E6%97%85%E8%A1%8C%E5%BF%97/" class="post-category">
-                                    旅行志
+                            <a href="/JustinLibo.github.io/categories/Qt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    Qt学习笔记
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/JustinLibo.github.io/tags/%E6%97%85%E8%A1%8C/">
-                        <span class="chip bg-color">旅行</span>
+                    <a href="/JustinLibo.github.io/tags/%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">工具</span>
                     </a>
                     
-                    <a href="/JustinLibo.github.io/tags/%E6%91%84%E5%BD%B1/">
-                        <span class="chip bg-color">摄影</span>
+                    <a href="/JustinLibo.github.io/tags/GUI/">
+                        <span class="chip bg-color">GUI</span>
                     </a>
                     
                 </div>

@@ -5,7 +5,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="机器学习：聚类, HandsomeBo&#39;s Blog">
+    <meta name="keywords" content="在JupyterNotebook中显示汉字, HandsomeBo&#39;s Blog">
     <meta name="description" content="热爱生活，分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>机器学习：聚类 | HandsomeBo&#39;s Blog</title>
+    <title>在JupyterNotebook中显示汉字 | HandsomeBo&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/JustinLibo.github.io/medias/ironman.png">
 
     <link rel="stylesheet" type="text/css" href="/JustinLibo.github.io/libs/awesome/css/all.css">
@@ -325,12 +325,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/JustinLibo.github.io/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">机器学习：聚类</h1>
+                    <h1 class="description center-align post-title">在JupyterNotebook中显示汉字</h1>
                 </div>
             </div>
         </div>
@@ -446,16 +446,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/JustinLibo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">机器学习</span>
-                            </a>
-                        
-                            <a href="/JustinLibo.github.io/tags/K-Means/">
-                                <span class="chip bg-color">K-Means</span>
-                            </a>
-                        
-                            <a href="/JustinLibo.github.io/tags/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">无监督学习</span>
+                            <a href="/JustinLibo.github.io/tags/Anaconda/">
+                                <span class="chip bg-color">Anaconda</span>
                             </a>
                         
                     </div>
@@ -470,6 +462,10 @@
                                 人工智能基础
                             </a>
                         
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                工具
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -479,7 +475,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-03
+                    2021-01-05
                 </div>
                 
 
@@ -488,14 +484,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    254
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -510,61 +506,20 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一-无监督学习"><a href="#一-无监督学习" class="headerlink" title="一.无监督学习"></a>一.无监督学习</h2><h3 id="1-小例"><a href="#1-小例" class="headerlink" title="1.小例"></a>1.小例</h3><p>在说实战之前，我们先来简单说一说机器学习中的无监督学习。举个栗子~~<br> 下面是几张小狗的图片，如果我们让计算机自己把这些图片分成两类，计算机会怎么做呢？<br> <img src="https://img-blog.csdnimg.cn/20200510150523691.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br> <img src="https://img-blog.csdnimg.cn/20200510150614476.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><img src="https://img-blog.csdnimg.cn/20200510150710990.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br> <img src="https://img-blog.csdnimg.cn/2020051015073198.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><img src="https://img-blog.csdnimg.cn/20200510150757730.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><img src="https://img-blog.csdnimg.cn/20200510150922899.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br> ps：图片均来源于网络，若有侵权请联系删除，谢谢！</p>
-<p>因为没有明确的分类标准，所以计算机可能会按照不同的方式对这些图片进行分类，比如：</p>
-<ol>
-<li>小狗是站着还是坐着</li>
-<li>小狗脖子处是否有饰品</li>
-<li>小狗是否露出了舌头</li>
-</ol>
-<p>除此之外分类的方式还有很多，从中可以看出无监督学习的一些特点：</p>
-<ol>
-<li>没有对与错（分类方式不唯一）</li>
-<li>寻找数据的共同点从而进行分类（无论采用哪种方式进行分类，同类图片都是有共同点的）</li>
-</ol>
-<p>通过这个简单的例子，下面就来看一看无监督学习的简单定义吧！</p>
-<h3 id="2-简单定义"><a href="#2-简单定义" class="headerlink" title="2.简单定义"></a>2.简单定义</h3><p>无监督学习：机器学习的一种方法，没有给定事先标记过的训练示例，自动对输入的数据进行分类或分群。</p>
-<h3 id="3-优点："><a href="#3-优点：" class="headerlink" title="3.优点："></a>3.优点：</h3><ol>
-<li>算法不受监督信息（偏见）的约束，可能考虑到新的信息<br> 这也就是上例所说的可以按不同方式分类，并没有一个明确的规定</li>
-<li>不需要标签数据，极大程度扩大数据样本<br> 无监督学习不需要标签数据，这样在面临成千上万个数据时可以让计算机自动去分类从而节省大量的人力成本。</li>
-</ol>
-<h3 id="4-主要应用："><a href="#4-主要应用：" class="headerlink" title="4.主要应用："></a>4.主要应用：</h3><p>聚类分析、关联分析、维度缩减等</p>
-<p>这里简单来谈谈聚类分析(对其他应用感兴趣的小伙伴可以自己去找一下相关资料。)</p>
-<h2 id="二-聚类分析"><a href="#二-聚类分析" class="headerlink" title="二.聚类分析"></a>二.聚类分析</h2><h3 id="1-简单定义："><a href="#1-简单定义：" class="headerlink" title="1.简单定义："></a>1.简单定义：</h3><p>聚类分析又称为群分析，是根据对象某些属性的相似度，将其自动划分为不同的类别。</p>
-<h3 id="2-小例："><a href="#2-小例：" class="headerlink" title="2.小例："></a>2.小例：</h3><p>例如：</p>
-<p><img src="https://img-blog.csdnimg.cn/20200510153602871.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>一个公司可以根据自己客户几年来的数据把客户分成普通客户、vip客户、svip客户等等。这样就可以根据不同的客户类型进行不同的商业推广啦。</p>
-<p>又比如新闻关联：<br><img src="https://img-blog.csdnimg.cn/20200510154026950.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "><br>给定一个关键词，可以把最近有关这个关键词的最新最热新闻推送出来。</p>
-<h3 id="3-常用聚类算法："><a href="#3-常用聚类算法：" class="headerlink" title="3.常用聚类算法："></a>3.常用聚类算法：</h3><ol>
-<li><strong>KMeans聚类</strong><br> 根据数据与中心点距离划分类别<br> 基于类别数据更新中心点<br> 重复过程直到收敛</li>
-</ol>
-<p><strong>特点：实现简单、收敛快；需要指定类别数量（需要告诉计算机要分成几类）</strong></p>
-<ol start="2">
-<li><strong>均值漂移聚类(Meanshift)</strong><br> 在中心点一定区域检索数据点<br> 更新中心<br> 重复流程到中心点稳定</li>
-</ol>
-<p><strong>特点：自动发现类别数量，不需要人工选择；需要选择区域半径</strong></p>
-<ol start="3">
-<li><strong>DBSCAN算法(基于密度的空间聚类算法)</strong><br> 基于区域点密度筛选有效数据<br> 基于有效数据向周边扩张，直到没有新点加入</li>
-</ol>
-<p><strong>特点：过滤噪音数据；不需要人为选择类别数量；数据密度不同时影响结果</strong></p>
-<p>因为后面的实战是基于KMeans算法的，所以这里详细说一下KMeans算法，想更多了解其它算法的小伙伴可以去找找相关资料。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200510160437107.png" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20200510160517156.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20200510160605929.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/20200510160801685.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><img src="https://img-blog.csdnimg.cn/2020051016084795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p>这样可能不太好理解，下面我们来看一看它的执行流程。</p>
-<p><img src="https://img-blog.csdnimg.cn/20200510161018662.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><font color='red'> 假设这里把这些点分为两类，在这些点中随机选择两个聚类中心。</font></p>
-<p><img src="https://img-blog.csdnimg.cn/20200510161056561.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><font color='red'> 计算每个点到聚类中心的距离，然后将这些点进行分类。 </font></p>
-<p><font color='red'> text </font><img src="https://img-blog.csdnimg.cn/20200510161150831.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><font color='red'> 更新聚类中心 </font></p>
-<p><img src="https://img-blog.csdnimg.cn/20200510161302861.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><font color='red'> 重新计算每个点到聚类中心的距离并根据新的距离重新分类 </font></p>
-<p><img src="https://img-blog.csdnimg.cn/20200510161413464.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
-<p><font color='red'> 直至中心不再变化为止。</font></p>
-<p><img src="https://img-blog.csdnimg.cn/20200510161541800.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NjM0NDM2OA==,size_16,color_FFFFFF,t_70" alt=" "></p>
+                <h1 id="在Jupyter-Notebook中显示汉字"><a href="#在Jupyter-Notebook中显示汉字" class="headerlink" title="在Jupyter Notebook中显示汉字"></a>在Jupyter Notebook中显示汉字</h1><p>在绘制散点图时，无法正常显示汉字<br><img src="https://img-blog.csdnimg.cn/20210126141052303.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>插入如下两行代码即可解决：</p>
+<pre class=" language-bash"><code class="language-bash">plt.rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'SimHei'</span><span class="token punctuation">]</span>
+plt.rcParams<span class="token punctuation">[</span><span class="token string">'axes.unicode_minus'</span><span class="token punctuation">]</span> <span class="token operator">=</span> False
+</code></pre>
+<br/>
+
+<p>若出现以下错误<br>==用来正常显示中文标签显示错误代码plt.rcParams[‘font.sans-serif’] = [‘SimHei’]无法运行==<br>则有以下解决方法：<br>    1.  下载simhei.ttf字体，这里提供一个链接<a target="_blank" rel="noopener" href="http://www.xiazaiziti.com/210356.html">SimHei.ttf</a><br>    2.  找到你的解释器的fonts文件夹下的ttf文件夹，例如我的解释器是Anaconda，在Anaconda的安装目录下，fonts文件夹的位置如上图的路径：D:\AnaInstallDir\Anaconda3\Lib\site-packages\ matplotlib\mpl-data\fonts\ttf。<br>    若解释器是自己安装的Python，文件夹的位置一般为：<br>    C:\Users\用户名\AppData\Local\Programs\ Python\ Python35\Lib\site-packages\matplotlib\mpl-data\fonts\ttf<br>    3. 将下载的SimHei.ttf文件放入ttf文件夹下再运行程序就OK啦（即代码plt.rcParams[‘font.sans-serif’] = [‘SimHei’]可以运行）</p>
+<blockquote>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/xcjjenifer/article/details/105419979">https://blog.csdn.net/xcjjenifer/article/details/105419979</a></p>
+</blockquote>
+<br/>
+运行效果如下：
+
+<p><img src="https://img-blog.csdnimg.cn/20210126142136770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjUxMzQ2OQ==,size_16,color_FFFFFF,t_70"></p>
 
                 
             </div>
@@ -591,7 +546,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/03/7098.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/03/03/7098.html</a>
+                    <a href="https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/01/05/34495.html">https://github.com/JustinLibo/JustinLibo.github.io.git/JustinLibo.github.io/2021/01/05/34495.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -629,16 +584,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/JustinLibo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">机器学习</span>
-                                </a>
-                            
-                                <a href="/JustinLibo.github.io/tags/K-Means/">
-                                    <span class="chip bg-color">K-Means</span>
-                                </a>
-                            
-                                <a href="/JustinLibo.github.io/tags/%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">无监督学习</span>
+                                <a href="/JustinLibo.github.io/tags/Anaconda/">
+                                    <span class="chip bg-color">Anaconda</span>
                                 </a>
                             
                         </div>
@@ -814,23 +761,23 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/03/03/7095.html">
+                <a href="/JustinLibo.github.io/2021/02/01/25359.html">
                     <div class="card-image">
                         
-                        <img src="https://blog.chasingwind.top/s0YpbF.png" class="responsive-img" alt="机器学习之聚类—Kmeans实战">
+                        <img src="https://blog.chasingwind.top/default_21.jpg" class="responsive-img" alt="人工智能与机器学习概念、应用、实现方法">
                         
-                        <span class="card-title">机器学习之聚类—Kmeans实战</span>
+                        <span class="card-title">人工智能与机器学习概念、应用、实现方法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            人工智能—维基百科定义：人工智能，亦称智机器智能，指由人制造出来的机器所表现出来的智能。人工智能的核心问题包括建构能够跟人类似甚至超卓的推理、知识、规划、学习、交流、感知、移物、使用工具和操控机械的能力等
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-01
                         </span>
                         <span class="publish-author">
                             
@@ -849,10 +796,6 @@
                     
                     <a href="/JustinLibo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/JustinLibo.github.io/tags/K-Means/">
-                        <span class="chip bg-color">K-Means</span>
                     </a>
                     
                 </div>
@@ -866,13 +809,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/JustinLibo.github.io/2021/03/03/7094.html">
+                <a href="/JustinLibo.github.io/2021/01/04/41489.html">
                     <div class="card-image">
                         
                         
-                        <img src="/JustinLibo.github.io/medias/featureimages/17.jpg" class="responsive-img" alt="机器学习---逻辑回归:考试通过预测">
+                        <img src="/JustinLibo.github.io/medias/featureimages/20.jpg" class="responsive-img" alt="Anaconda的介绍与使用">
                         
-                        <span class="card-title">机器学习---逻辑回归:考试通过预测</span>
+                        <span class="card-title">Anaconda的介绍与使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -883,7 +826,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-04
                             </span>
                         <span class="publish-author">
                             
@@ -893,6 +836,10 @@
                                     人工智能基础
                                 </a>
                             
+                            <a href="/JustinLibo.github.io/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%9F%BA%E7%A1%80/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -900,12 +847,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/JustinLibo.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                        <span class="chip bg-color">机器学习</span>
-                    </a>
-                    
-                    <a href="/JustinLibo.github.io/tags/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/">
-                        <span class="chip bg-color">逻辑回归</span>
+                    <a href="/JustinLibo.github.io/tags/Anaconda/">
+                        <span class="chip bg-color">Anaconda</span>
                     </a>
                     
                 </div>
@@ -1054,7 +997,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">14.7k</span>&nbsp;字
+                class="white-color">16.4k</span>&nbsp;字
             
             
             
