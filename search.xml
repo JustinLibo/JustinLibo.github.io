@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>浏览器打开网页</title>
+      <link href="/JustinLibo.github.io/2021/03/11/48570.html"/>
+      <url>/JustinLibo.github.io/2021/03/11/48570.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="当浏览器地址栏输入一个url网址后，敲下回车会发生什么？"><a href="#当浏览器地址栏输入一个url网址后，敲下回车会发生什么？" class="headerlink" title="当浏览器地址栏输入一个url网址后，敲下回车会发生什么？"></a><font color=##0099ff>当浏览器地址栏输入一个url网址后，敲下回车会发生什么？</font></h2><ul><li><strong>1.利用DNS域名解析系统进行域名解析，将域名解析成IP</strong><br>因为域名只是一个别名，计算机只认识IP，所以需要DNS解析一下（如果有端口号需要识别端口号，否则进入默认端口：http协议默认端口号是80，https默认端口号是443）</li><li><strong>2.查找ip对应的主机服务器</strong><br>如果是第一次访问该服务器，会向网络供应商（移动、联通…）请求</li><li><strong>3.TCP的三次握手，经过三次在客户端和服务器之间传递报文，建立连接</strong></li><li><strong>4.发起http请求，请求入口文件，后端接收到请求相关信息，返回入口文件</strong></li><li>5.解析入口文件，同时如果有资源请求继续发送http请求…</li><li><strong>6.过程中如果碰到css文件，js文件，需要去加载外部文件</strong><ul><li>加载css，渲染html结构</li><li>加载js</li><li>执行js的逻辑，有ajax请求，在此去服务器请求数据</li><li>通过数据刷新DOM</li></ul></li><li><strong>7.文件渲染完成（TCP的四次挥手，断开连接）</strong></li></ul><p><img src="https://i.loli.net/2020/09/12/4TJIu2gLXBphMP7.png" alt="访问网页过程"></p><p><strong>访问网页过程</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 面试常见问题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CNN实现猫狗图像分类</title>
       <link href="/JustinLibo.github.io/2021/02/20/7097.html"/>
       <url>/JustinLibo.github.io/2021/02/20/7097.html</url>
